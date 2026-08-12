@@ -12,3 +12,5 @@ site
 *.ipynb
 processed_data
 results
+data_collection_scripts/google-service-account-key.json
+.ipfs_cache

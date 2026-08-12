@@ -7,15 +7,18 @@ import json
 import datetime
 import calendar
 import argparse
+import logging
 from functools import lru_cache
 from collections import defaultdict
 
+import requests
 from yaml import safe_load
 
 ROOT_DIR = pathlib.Path(__file__).resolve().parent.parent
 INTERIM_DIR = ROOT_DIR / 'processed_data'
 MAPPING_INFO_DIR = ROOT_DIR / 'mapping_information'
 RESULTS_DIR = ROOT_DIR / 'results'
+IPFS_CACHE_DIR = ROOT_DIR / '.ipfs_cache'
 
 with open(ROOT_DIR / "config.yaml") as f:
     config = safe_load(f)
@@ -474,10 +477,71 @@ def get_output_filename(clustering_flag):
     return 'output_' + ('clustered' if clustering_flag else 'non_clustered') + '.csv'
 
 
+def get_ipfs_gateways():
+    """
+    Retrieves the IPFS gateway URLs used to resolve `ipfs://<CID>` entries in input_directories. If more than one is
+    configured, they are tried in order for each file, falling back to the next one on failure (e.g. a public
+    gateway followed by a local node's gateway, typically http://127.0.0.1:8080).
+    :returns: list of str, the base URLs of the gateways (defaults to a single public gateway if not set in the
+        config file)
+    """
+    config = get_config_data()
+    gateways = config.get('ipfs_gateway', 'https://ipfs.io')
+    if isinstance(gateways, str):
+        gateways = [gateways]
+    return [gateway.rstrip('/') for gateway in gateways]
+
+
+def fetch_ipfs_directory(cid, subpath=''):
+    """
+    Fetches the raw data files (one per ledger defined in the config file) from an IPFS directory, via the configured
+    IPFS gateway(s), and caches them locally. Files that have already been cached are not re-fetched. If a file can't
+    be fetched from any configured gateway, it is skipped (a warning is logged), so that other input directories may
+    still be used to look for the corresponding ledger's raw data.
+    :param cid: string, the IPFS CID of a (unixfs) directory that is expected to contain files named
+        <ledger>_raw_data.json for one or more ledgers
+    :param subpath: string, an optional path within the directory pointed to by the CID
+    :returns: pathlib.PosixPath object of the local directory where the fetched files are cached
+    """
+    gateways = get_ipfs_gateways()
+    cache_dir = IPFS_CACHE_DIR / cid / subpath if subpath else IPFS_CACHE_DIR / cid
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    gateway_path = f'{cid}/{subpath}' if subpath else cid
+
+    for ledger in get_ledgers():
+        filename = f'{ledger}_raw_data.json'
+        local_path = cache_dir / filename
+        if local_path.is_file():
+            continue
+        for gateway in gateways:
+            url = f'{gateway}/ipfs/{gateway_path}/{filename}'
+            try:
+                response = requests.get(url, timeout=60)
+                response.raise_for_status()
+            except requests.RequestException as e:
+                logging.warning(f'Could not fetch {filename} from IPFS at {url}: {e}')
+                continue
+            local_path.write_bytes(response.content)
+            break
+
+    return cache_dir
+
+
 def get_input_directories():
     """
-    Reads the config file and retrieves the directories to look for raw block data
+    Reads the config file and retrieves the directories to look for raw block data. Entries can be local paths,
+    relative to the root directory of the repository, or IPFS references of the form `ipfs://<CID>` (optionally
+    `ipfs://<CID>/<subpath>`), in which case the relevant raw data files are fetched (if not already cached) from the
+    configured IPFS gateway and the local cache directory is used in their place.
     :returns: a list of directories that may contain the raw block data
     """
     config = get_config_data()
-    return [ROOT_DIR / input_dir for input_dir in config['input_directories']]
+    input_dirs = []
+    for entry in config['input_directories']:
+        entry = str(entry)
+        if entry.startswith('ipfs://'):
+            cid, _, subpath = entry[len('ipfs://'):].partition('/')
+            input_dirs.append(fetch_ipfs_directory(cid, subpath))
+        else:
+            input_dirs.append(ROOT_DIR / entry)
+    return input_dirs
