@@ -126,7 +126,6 @@ There are also two command line arguments that can be used to customize the data
   exist. By default, this flag is set to False and the script only fetches block data for some blockchain if the
   corresponding file does not already exist.
 
-
 ## Solana
 
 Solana data can be collected in more than one way. This project uses a dedicated
@@ -142,3 +141,26 @@ Solana's on-chain Config program. Only validators that publish metadata are
 included, so this file can be reused as a reference across any range of blocks.
 Since validators can update their metadata over time, this file should ideally
 be regenerated periodically to stay current.
+
+## Reading input data from IPFS
+
+In addition to local directories, entries in the `input_directories` list of the
+[configuration file](https://github.com/Blockchain-Technology-Lab/consensus-decentralization/blob/main/config.yaml)
+can be IPFS references of the form `ipfs://<CID>` (optionally `ipfs://<CID>/<subpath>`). `<CID>` combined with
+`<subpath>` (if given) must resolve directly to a (unixfs) directory that contains raw data files named
+`<ledger>_raw_data.json`, in the same format expected in a local input directory (one file per ledger, following the
+schemas described above) - not to a parent/wrapper directory that merely contains such a directory.
+
+For example, a dataset publisher might give you a CID whose root only contains a single named subdirectory (e.g.
+`solana-dataset/`) which in turn holds the actual `<ledger>_raw_data.json` file. In that case the CID alone is not
+enough - you need `ipfs://<CID>/solana-dataset` so that the reference points directly at the directory containing the
+`.json` file. You can check a CID's contents beforehand by browsing `https://<gateway>/ipfs/<CID>/` (e.g.
+`https://ipfs.io/ipfs/<CID>/`) in a browser.
+
+When such an entry is encountered, the relevant files are fetched from the gateway(s) configured via `ipfs_gateway` in
+the configuration file (a public gateway such as `https://ipfs.io` by default) and cached locally under
+`.ipfs_cache/` at the root of the repository, so that they are only fetched once. `ipfs_gateway` can also be a list
+of gateway URLs, in which case they are tried in order for each file, falling back to the next one on failure -
+useful for falling back to a local/self-hosted node's gateway (typically `http://127.0.0.1:8080`, requires running
+`ipfs daemon`) if a public gateway is unavailable or rate-limited. Note that the first item of `input_directories` is
+used as the destination for newly collected data (see above) and therefore should not be an IPFS reference.

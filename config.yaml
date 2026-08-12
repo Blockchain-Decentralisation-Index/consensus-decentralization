@@ -63,5 +63,26 @@ plot_parameters:
 # List of paths that specify where to look for raw block data. Relative to the root directory of the repository.
 # The first item in the list is the directory that is used to write newly fetched data when using the
 #  `collect_block_data` script and is also the directory where tests expect the sample data to be found.
+# For this reason, entries that fetch data from IPFS (see below) should not be listed first.
+# Entries can also be IPFS references of the form `ipfs://<CID>` (optionally `ipfs://<CID>/<subpath>`). <CID>
+#  combined with <subpath> (if given) must point directly at a directory that contains files named
+#  <ledger>_raw_data.json (one or more of them, in the same format expected in a local input directory) - not at a
+#  parent/wrapper directory that merely contains such a directory. If the CID you were given only wraps the actual
+#  dataset directory (e.g. a single named subdirectory holding the raw data files), append
+#  that subdirectory's name as <subpath> so the reference resolves to where the .json files actually live. Such
+#  files are fetched via the configured `ipfs_gateway` and cached locally (in .ipfs_cache/) so that they are not
+#  re-fetched on subsequent runs.
 input_directories:
   - raw_block_data
+  #- ipfs://<CID>
+
+# The gateway(s) used to resolve `ipfs://<CID>` entries in input_directories. Can be a single URL (as below) or a
+#  list of URLs, in which case they are tried in order for each file, falling back to the next one on failure. This
+#  can be used e.g. to fall back to a local/self-hosted node's gateway (typically http://127.0.0.1:8080, requires
+#  running `ipfs daemon`) if a public gateway is unavailable or rate-limited:
+#  ipfs_gateway:
+#    - https://ipfs.io
+#    - http://127.0.0.1:8080
+ipfs_gateway:
+  - https://ipfs.io
+  - http://127.0.0.1:8080
