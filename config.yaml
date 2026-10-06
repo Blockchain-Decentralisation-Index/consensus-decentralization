@@ -63,5 +63,15 @@ plot_parameters:
 # List of paths that specify where to look for raw block data. Relative to the root directory of the repository.
 # The first item in the list is the directory that is used to write newly fetched data when using the
 #  `collect_block_data` script and is also the directory where tests expect the sample data to be found.
+# For this reason, entries that fetch data from IPFS (see below) should not be listed first.
+# Entries can also be IPFS references (`ipfs://<CID>` or `ipfs://<CID>/<subpath>`) pointing directly at a directory
+#  containing `<ledger>_raw_data.json` files, not a wrapper directory. See docs/data.md for details.
 input_directories:
   - raw_block_data
+  #- ipfs://<CID>
+
+# The gateway(s) used to resolve `ipfs://<CID>` entries: a single URL, or a list tried in order with fallback on
+#  failure (e.g. a public gateway, then a local `ipfs daemon` at http://127.0.0.1:8080). See docs/data.md for details.
+ipfs_gateway:
+  - https://ipfs.io
+  - http://127.0.0.1:8080

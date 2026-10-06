@@ -2,6 +2,9 @@ import datetime
 import argparse
 import shutil
 import pytest
+from unittest.mock import patch, Mock
+import requests
+import consensus_decentralization.helper as hlp
 from consensus_decentralization.helper import get_pool_identifiers, get_pool_legal_links, get_known_addresses, \
     get_pool_clusters, write_blocks_per_entity_to_file, get_blocks_per_entity_from_file, get_timeframe_beginning, \
     get_timeframe_end, get_time_period, get_ledgers, valid_date, INTERIM_DIR, get_blocks_per_entity_filename, \
@@ -184,3 +187,59 @@ def test_get_representative_dates():
         ]
     representative_dates = get_representative_dates(time_chunks)
     assert representative_dates == ['2022-07-02', '2023-07-02', '2024-07-01']
+
+
+def test_get_input_directories(tmp_path, monkeypatch):
+    monkeypatch.setattr(hlp, 'IPFS_CACHE_DIR', tmp_path)
+    monkeypatch.setattr(hlp, 'config', {
+        'ledgers': ['bitcoin', 'ethereum'],
+        'input_directories': ['raw_block_data', 'ipfs://testcid'],
+    })
+
+    mock_response = Mock(content=b'{"number": 1}\n')
+    with patch('consensus_decentralization.helper.requests.get', return_value=mock_response) as mock_get:
+        dirs = hlp.get_input_directories()
+
+    ipfs_dir = tmp_path / 'testcid'
+    assert dirs == [hlp.ROOT_DIR / 'raw_block_data', ipfs_dir]
+    assert (ipfs_dir / 'bitcoin_raw_data.json').read_bytes() == b'{"number": 1}\n'
+    assert (ipfs_dir / 'ethereum_raw_data.json').is_file()
+    assert mock_get.call_count == 2
+    mock_get.assert_any_call('https://ipfs.io/ipfs/testcid/bitcoin_raw_data.json', timeout=60)
+
+    # Cached files should not be re-fetched on subsequent calls
+    with patch('consensus_decentralization.helper.requests.get', return_value=mock_response) as mock_get_again:
+        hlp.get_input_directories()
+    assert mock_get_again.call_count == 0
+
+
+def test_get_input_directories_skips_missing_ledger_data(tmp_path, monkeypatch):
+    monkeypatch.setattr(hlp, 'IPFS_CACHE_DIR', tmp_path)
+    monkeypatch.setattr(hlp, 'config', {
+        'ledgers': ['bitcoin'],
+        'input_directories': ['ipfs://testcid'],
+    })
+
+    with patch('consensus_decentralization.helper.requests.get', side_effect=requests.RequestException('not found')):
+        dirs = hlp.get_input_directories()
+
+    assert not (dirs[0] / 'bitcoin_raw_data.json').exists()
+
+
+def test_get_input_directories_falls_back_to_next_gateway(tmp_path, monkeypatch):
+    monkeypatch.setattr(hlp, 'IPFS_CACHE_DIR', tmp_path)
+    monkeypatch.setattr(hlp, 'config', {
+        'ledgers': ['bitcoin'],
+        'input_directories': ['ipfs://testcid'],
+        'ipfs_gateway': ['https://unreachable.example', 'http://127.0.0.1:8080'],
+    })
+
+    mock_response = Mock(content=b'{"number": 1}\n')
+    with patch('consensus_decentralization.helper.requests.get',
+               side_effect=[requests.RequestException('unreachable'), mock_response]) as mock_get:
+        dirs = hlp.get_input_directories()
+
+    assert (dirs[0] / 'bitcoin_raw_data.json').read_bytes() == b'{"number": 1}\n'
+    assert mock_get.call_count == 2
+    mock_get.assert_any_call('https://unreachable.example/ipfs/testcid/bitcoin_raw_data.json', timeout=60)
+    mock_get.assert_any_call('http://127.0.0.1:8080/ipfs/testcid/bitcoin_raw_data.json', timeout=60)
