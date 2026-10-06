@@ -151,12 +151,6 @@ can be IPFS references of the form `ipfs://<CID>` (optionally `ipfs://<CID>/<sub
 `<ledger>_raw_data.json`, in the same format expected in a local input directory (one file per ledger, following the
 schemas described above) - not to a parent/wrapper directory that merely contains such a directory.
 
-For example, a dataset publisher might give you a CID whose root only contains a single named subdirectory (e.g.
-`solana-dataset/`) which in turn holds the actual `<ledger>_raw_data.json` file. In that case the CID alone is not
-enough - you need `ipfs://<CID>/solana-dataset` so that the reference points directly at the directory containing the
-`.json` file. You can check a CID's contents beforehand by browsing `https://<gateway>/ipfs/<CID>/` (e.g.
-`https://ipfs.io/ipfs/<CID>/`) in a browser.
-
 When such an entry is encountered, the relevant files are fetched from the gateway(s) configured via `ipfs_gateway` in
 the configuration file (a public gateway such as `https://ipfs.io` by default) and cached locally under
 `.ipfs_cache/` at the root of the repository, so that they are only fetched once. `ipfs_gateway` can also be a list
