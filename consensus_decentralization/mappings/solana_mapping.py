@@ -52,3 +52,21 @@ class SolanaMapping(DefaultMapping):
         if reward_address in self.known_addresses.keys():
             return self.known_addresses[reward_address]
         return None
+
+    def map_from_known_clusters(self, block):
+        """
+        Maps one block to its block producer (validator cluster) based on known cluster information.
+        Overrides the map_from_known_clusters of the DefaultMapping class to adapt the process to Solana.
+        Specifically, the clusters file (clusters/solana.json) is keyed by VOTE ACCOUNT, i.e. the block's
+        identifier, rather than by the reward address as in Cardano. This is because in Solana the vote
+        account is the validator's stable, permanent identifier, whereas the reward (identity) address can
+        be rotated.
+        :param block: dictionary with block information (block number, timestamp, identifiers, reward addresses)
+        :returns: string, which corresponds to the name of the cluster that produced the block, if it was
+        successfully mapped, otherwise None
+        """
+        if len(self.known_clusters) > 0:
+            block_identifier = block['identifiers']  # vote account
+            if block_identifier in self.known_clusters.keys():
+                return self.known_clusters[block_identifier]['cluster']
+        return None
