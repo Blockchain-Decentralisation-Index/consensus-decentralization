@@ -107,6 +107,19 @@ def prep_sample_solana_mapping_info():
     os.remove(mapping_info_dir / 'identifiers/sample_solana.json')
 
 
+@pytest.fixture
+def prep_sample_solana_cluster_mapping_info():
+    mapping_info_dir = pathlib.Path(__file__).resolve().parent.parent / 'mapping_information'
+    # Create temp mapping info files for the sample project, INCLUDING clusters, so that
+    # the cluster-based mapping (map_from_known_clusters) is exercised.
+    shutil.copy2(mapping_info_dir / 'identifiers/solana.json', mapping_info_dir / 'identifiers/sample_solana.json')
+    shutil.copy2(mapping_info_dir / 'clusters/solana.json', mapping_info_dir / 'clusters/sample_solana.json')
+    yield
+    # Remove temp mapping info files
+    os.remove(mapping_info_dir / 'identifiers/sample_solana.json')
+    os.remove(mapping_info_dir / 'clusters/sample_solana.json')
+
+
 def test_map(setup_and_cleanup, prep_sample_bitcoin_mapping_info):
     mapping_info_dir, test_raw_data_dirs, test_output_dir = setup_and_cleanup
 
@@ -336,3 +349,41 @@ def test_solana_mapping(setup_and_cleanup, prep_sample_solana_mapping_info):
         if block['number'] in expected_block_creators:
             assert block['creator'] == expected_block_creators[block['number']]
             assert block['mapping_method'] == expected_mapping_methods[block['number']]
+
+
+def test_solana_cluster_mapping(setup_and_cleanup, prep_sample_solana_cluster_mapping_info):
+    """
+    With a clusters/solana.json present, blocks whose vote account (the block's identifier)
+    belongs to a cluster must be mapped to the cluster name via map_from_known_clusters,
+    overriding the per-validator identifier mapping. Blocks whose vote account is not in the
+    clusters file are left to the earlier mapping methods (here: fallback), which exercises
+    the None branch of the override.
+    """
+    mapping_info_dir, test_raw_data_dirs, test_output_dir = setup_and_cleanup
+
+    parsed_data = parse(ledger='sample_solana', input_dirs=test_raw_data_dirs)
+    apply_mapping(project='sample_solana', parsed_data=parsed_data, output_dir=test_output_dir)
+
+    # Haz7...  = "Temporal Emerald"  -> multi-member cluster "Temporal"
+    # ERut...  = "Coinbase 05"       -> multi-member cluster "Coinbase"
+    # 3N7s...  = "binance staking"   -> singleton, cluster name "Binance Staking"
+    expected_block_creators = {
+        '437783806': 'Temporal',
+        '437783795': 'Binance Staking',
+        '437783783': 'Coinbase',
+    }
+    expected_mapping_methods = {
+        '437783806': 'known_clusters',
+        '437783795': 'known_clusters',
+        '437783783': 'known_clusters',
+        # Not in the clusters file -> cluster lookup returns None -> fallback stands.
+        '437783803': 'fallback_mapping',
+        '437783799': 'fallback_mapping',
+    }
+    with open(test_output_dir / 'sample_solana/mapped_data_clustered.json') as f:
+        mapped_data = json.load(f)
+    for block in mapped_data:
+        if block['number'] in expected_mapping_methods:
+            assert block['mapping_method'] == expected_mapping_methods[block['number']]
+        if block['number'] in expected_block_creators:
+            assert block['creator'] == expected_block_creators[block['number']]

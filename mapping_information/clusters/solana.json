@@ -1,0 +1,2315 @@
+{
+    "94EhHE7MaKHq4p8oFADeyizDjwYwgFn1YBYGky8mR35z": {
+        "cluster": "[Noders]",
+        "validator": "[NODERS]",
+        "source": [
+            "singleton"
+        ]
+    },
+    "voEskim7SFWrPx1tV2PVisqyrJejxmDEARX11mtZ5vo": {
+        "cluster": "Polkachu.Com",
+        "validator": "polkachu.com",
+        "source": [
+            "singleton"
+        ]
+    },
+    "gangtRyGPTvYWb8K3xS2feJQaCks4iJ7rytFUPtVqSY": {
+        "cluster": "The Lotus Validator",
+        "validator": "The Lotus Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "jntrMCSkeNagaMM437fhZxLYbFJh6pvj68bQDZx2pXf": {
+        "cluster": "Janitor",
+        "validator": "Janitor",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ErvMUdtMC7AX55zKdYSyy4DnWNCrTsWn5GwprSG7ocnx": {
+        "cluster": "Catalystx - Innovation Onchain",
+        "validator": "CatalystX - Innovation OnChain",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8vyuJTHSDkx7k1zymea4TMsgvixf3rCYBXHPDQajePkE": {
+        "cluster": "Lusol +Mev",
+        "validator": "LuSOL +MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EMVmh5hF6LT1sZM9G7dEX1bykRYEymWY2vtE7QHBBAW6": {
+        "cluster": "Omeganode Validator",
+        "validator": "OmegaNode Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ALPHAthakWdoUxXJP6z8cjCkwrufcARXqi34EjShtFVT": {
+        "cluster": "Lifetime 0% Fee + Full Mev Payout | Alphasearch",
+        "validator": "Lifetime 0% fee + full MEV payout | Alphasearch",
+        "source": [
+            "singleton"
+        ]
+    },
+    "HHLMTHR9YoyDNsWKVJBT5AKrX86iQjkiKRFRrnaFubgq": {
+        "cluster": "Velox Validator",
+        "validator": "Velox Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GHViLgbrJdZDPb6sphRbeuPNM9cmjsFuGWzrTF1sKF5n": {
+        "cluster": "Upbit Staking",
+        "validator": "Upbit Staking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6ANziPu9boXJ6PZzSQoBVEUz8qowKMK3XWaxmG4EYVMJ": {
+        "cluster": "",
+        "validator": " ",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SFund7s2YPS7iCu7W2TobbuQEpVEAv9ZU7zHKiN1Gow": {
+        "cluster": "Staking Fund",
+        "validator": "Staking Fund",
+        "source": [
+            "singleton"
+        ]
+    },
+    "capyZmRCkNE34ifDrRdfLtDB4Fi58rtLa94H9nU5z7n": {
+        "cluster": "Capy",
+        "validator": "capy",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6AAeoHYMUQfSdFGqubUmWVAasFkzJEq47oKpHNNTZxLN": {
+        "cluster": "Tane",
+        "validator": "Tane",
+        "source": [
+            "singleton"
+        ]
+    },
+    "novaoLcuVHSudkW3Cphuhiv82vspN5qzinGCtEbwQxz": {
+        "cluster": "Nova Consortium",
+        "validator": "Nova Consortium",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BmMVRAVef2qmJ1tJpG3JwRUtnfEiTbvDw9ZeFEi4wE7D": {
+        "cluster": "Stakely | 0% Fee",
+        "validator": "Stakely | 0% fee",
+        "source": [
+            "singleton"
+        ]
+    },
+    "RNXpSdqrJL6eoLrbW69Q9qsFviEwRpfFfk3HiRRRohq": {
+        "cluster": "Rockawayx Firedancer",
+        "validator": "RockawayX Firedancer",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3tUZu4CkwMLwYdosoGc85n48VgDMyxZVkL1VUJc7DrxW": {
+        "cluster": "Flash",
+        "validator": "Flash",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2NXwP6K1ityVnvK575SY7KdoEkvPHrfcRLY7BJRBk4ht": {
+        "cluster": "\ud83d\udd25Aurora Staking",
+        "validator": "\ud83d\udd25Aurora staking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7emL18Bnve7wbYE9Az7vYJjikxN6YPU81igf6rVU5FN8": {
+        "cluster": "Temporal",
+        "validator": "Temporal Topaz",
+        "source": [
+            "homepage"
+        ]
+    },
+    "Haz7b47sZBpxh9SwggGndN3fAyNQ1S949BPdxWXS3ab6": {
+        "cluster": "Temporal",
+        "validator": "Temporal Emerald",
+        "source": [
+            "homepage"
+        ]
+    },
+    "oPaLTmyvoUhW26QCMwLA5JNUeBYy72PDpFoXQF8SeX4": {
+        "cluster": "Temporal",
+        "validator": "Temporal Opal",
+        "source": [
+            "homepage"
+        ]
+    },
+    "Ha8d5UUJUmEVHh2mLitaihGxQJeU6GfGx5FwBenEJCxN": {
+        "cluster": "Axis",
+        "validator": "Axis",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SQDSVTDfE5HqL7D6RjZk1vvZhaheWoskrDdDHCki68w": {
+        "cluster": "Squads",
+        "validator": "Squads",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7miZ2ZoXwS3YDzBRCbWcEtNVyuxk8WbbcyQwq7i5btvZ": {
+        "cluster": "Westside \ud83d\udd96",
+        "validator": "WestSide \ud83d\udd96",
+        "source": [
+            "singleton"
+        ]
+    },
+    "B38JgkTi7Fu2Uxk8JzNw4M7aMhVxzGu2fsRqHNScPkCQ": {
+        "cluster": "Dan'S Validator",
+        "validator": "Dan's Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "g5kwi5sFXQTx26jwetYK97ytvx1WpA1RWuQ82Afdzyn": {
+        "cluster": "Blockman",
+        "validator": "Blockman",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4udPrmxccbP1NwDJ6vChFKs5qcqyjmQff6gsKXD1mdaj": {
+        "cluster": "Allied Validator",
+        "validator": "Allied Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "A7uqmajxP3NdzbYDXiGQRGTL8d3dZ5pjS4kR9NTZcxtg": {
+        "cluster": "L0Vd 0% Fee +Mev",
+        "validator": "L0vd 0% fee +MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Ha1VoTEPWFQp1wZjbQhBNXJftuHvimu1ruzF3xKYRPDQ": {
+        "cluster": "Ha1Iad3",
+        "validator": "Ha1iad3",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FgiteGaHbA22Wt4Quzv3muscQtvX7gzVwvUHbFnb3rTJ": {
+        "cluster": "Solana",
+        "validator": "SUNREN",
+        "source": [
+            "homepage"
+        ]
+    },
+    "9rwCwfL74J6AfgKbVK7s7jjMqngvHtiBcV1WTNXN8hLa": {
+        "cluster": "Solana",
+        "validator": "Solana Vibe Station",
+        "source": [
+            "homepage"
+        ]
+    },
+    "2s2K5hcECd67832EzrVMCiCtbb54CHsqXtewuwwNVqtA": {
+        "cluster": "Nemertes",
+        "validator": "Nemertes",
+        "source": [
+            "singleton"
+        ]
+    },
+    "xLabsqDpN9WHXEXSJXk1yhqh5H8BgcqiBP1CR6Mkjcb": {
+        "cluster": "Xlabs",
+        "validator": "xLabs",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Azc2uttGtHsRLorfQzd7tsMNtfaEg7LyvVEMVtckPCNN": {
+        "cluster": "Fast Runner",
+        "validator": "Fast Runner",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6hkfqeNAbURk7CmAQsP4Qm6WwHVF4LxHupEvQf7Tkrf1": {
+        "cluster": "Valid Blocks",
+        "validator": "Valid Blocks",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3Xn3K5zeTzs4sURj1PCRaF6rvFg2hPgT49B4SiM998f7": {
+        "cluster": "Nufi",
+        "validator": "NuFi",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DQ7D6ZRtKbBSxCcAunEkoTzQhCBKLPdzTjPRRnM6wo1f": {
+        "cluster": "Stakewolf",
+        "validator": "StakeWolf",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7Eg46UwGgsufXdd9C9kF27UAyD2t4VdmCdVTtPFoqxCy": {
+        "cluster": "Bernardo Beacon",
+        "validator": "Bernardo Beacon",
+        "source": [
+            "singleton"
+        ]
+    },
+    "RaydiumNAMK9EbDEP5wab8XiRkHNz1897SBsGUKotrV": {
+        "cluster": "Raydium",
+        "validator": "Raydium",
+        "source": [
+            "singleton"
+        ]
+    },
+    "rapxbkwBSSvtqRFrsY83f51oUuZNuVXci74MuzYhiCy": {
+        "cluster": "Raposa Coffee",
+        "validator": "Raposa Coffee",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CzmqDuqEpfnkptuLAcikmJrhCnhFXo8aUBj6Rto1SPAc": {
+        "cluster": "Margus.One \ud83d\udc8e 0% Fee +Mev!",
+        "validator": "MARGUS.ONE \ud83d\udc8e 0% fee +MEV!",
+        "source": [
+            "singleton"
+        ]
+    },
+    "vanFfAkyFXFnj6TpmVwet6pJBnS4nBWNcJiE5GEsZ4K": {
+        "cluster": "Quantix",
+        "validator": "Quantix",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4EsJD6cpaae8rh27U9pHsfxAheCLQnze1bDvXZfpjcUv": {
+        "cluster": "Xstake | 0% Fee",
+        "validator": "xSTAKE | 0% fee",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ARf5F66NrsQDQY4cmSCwyQJrYKhsiydgmeDNiHEWEmKT": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase 06",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "GqcuMuWq4gKeCuCrD8iAjXTozCET2EP6qJXmZDFsSTWK": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase 03",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "AaVsZUEnrHUZoXC2oVgTY3GF5GGhzCTBGrjpBtuUWy1H": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase 04",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "ERut3CwqVeoa616QBaoHc5jL52RpkXjZZZ7MeaMaCtLi": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase 05",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "6D2jqw9hyVCpppZexquxa74Fn33rJzzBx38T58VucHx9": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase 02",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "beefKGBWeSpHzYBHZXwp5So7wdQGX6mu4ZHCsH3uTar": {
+        "cluster": "Coinbase",
+        "validator": "Coinbase",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "sShosKd6uA5c1ZpVMxdsE6do13TLRWSMYsXbSMmNC77": {
+        "cluster": "Dogo",
+        "validator": "dogo",
+        "source": [
+            "singleton"
+        ]
+    },
+    "bXr9MyoUAaGusQZ4gaUPmSZByHAV7RRGr1FhCW5tFh8": {
+        "cluster": "Bloxroute Eu",
+        "validator": "bloXroute EU",
+        "source": [
+            "singleton"
+        ]
+    },
+    "hy1oJTV2kX9acsqpwk7hbteqXFw9VDbWvbxoamFEufW": {
+        "cluster": "Hylo",
+        "validator": "Hylo",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AEtdq4CwtuktCEUWLLpRTNPBZs6tr7BBqxkHJ1DjAttR": {
+        "cluster": "Dain",
+        "validator": "DAIN",
+        "source": [
+            "singleton"
+        ]
+    },
+    "prt1s9dMM15LdsUX9HugajzqPB5WVN8a2mw3frAiCfj": {
+        "cluster": "Portals",
+        "validator": "Portals",
+        "source": [
+            "singleton"
+        ]
+    },
+    "nymsndUdAZyUPpWYz5VEg8Ghj9cFvwTRgciLogpmYaQ": {
+        "cluster": "Hypo Nyms",
+        "validator": "Hypo Nyms",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3N7s9zXMZ4QqvHQR15t5GNHyqc89KduzMP7423eWiD5g": {
+        "cluster": "Binance Staking",
+        "validator": "binance staking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AY271jdvcyo5VzBiWsMGLEjpZFFrarq8FDydJHLmYgCG": {
+        "cluster": "Orang3Club",
+        "validator": "OranG3cluB",
+        "source": [
+            "singleton"
+        ]
+    },
+    "NeodymeDFipD7eA1ShrLJAZTBdHWcFsDB9YkoHshZNk": {
+        "cluster": "Neodyme",
+        "validator": "Neodyme",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4MU64AyHBkRBUAYgAm91sP5vFgzUUgFHuS82CVhE8Q2Q": {
+        "cluster": "Solid State Nodes",
+        "validator": "Solid State Nodes",
+        "source": [
+            "singleton"
+        ]
+    },
+    "HYUU9pLdZRXsMSy3efikYHLKagtubP2UZYtmfwP9FXpu": {
+        "cluster": "Firstset",
+        "validator": "Firstset",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8zHJtME22tiY3UsSHtDJXo2J8hUfwikBxXNbVqQzA92r": {
+        "cluster": "Bella2.0",
+        "validator": "Bella2.0",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Node56Cr7y4Udym2vPt9DsRbWcBL29JivsGh2drpbKb": {
+        "cluster": "Node Integration",
+        "validator": "Node Integration",
+        "source": [
+            "singleton"
+        ]
+    },
+    "86Sw9R6ynPmXnHfwUWinXtq1QoF2KHesfQQyZG5r8sXo": {
+        "cluster": "Digital Energy",
+        "validator": "Digital Energy",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8jxSHbS4qAnh5yueFp4D9ABXubKqMwXqF3HtdzQGuphp": {
+        "cluster": "Chainlayer",
+        "validator": "Chainlayer",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ANCVpxEySGWWLqqkVKw2xWYDE9UP4fmZWMCBr5t96jch": {
+        "cluster": "Anchorage Digital",
+        "validator": "Anchorage Digital",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SLNDoinxE7cCgE5ga6FJZ19F4FiUaEmtzSatbY6cjWy": {
+        "cluster": "Solend",
+        "validator": "Solend",
+        "source": [
+            "singleton"
+        ]
+    },
+    "roYL9AoyuGae7uEAErzZhPSSxnLLZU4TNx8wmwCk77r": {
+        "cluster": "Royal",
+        "validator": "Royal",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4BVYjw1ztUzUPsxsaCheWWwThT2X4rjogZytGnuWPUGg": {
+        "cluster": "Solraindrops",
+        "validator": "SOLrainDrops",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FzUNgBRnVxawDytN9GM7BFwxFfekuMs7BcAGybn4AmMk": {
+        "cluster": "Ntt Docomo Global",
+        "validator": "NTT DOCOMO GLOBAL",
+        "source": [
+            "singleton"
+        ]
+    },
+    "adraBKLNY3DL3pg6SJRDYiMA8BsznaWpUdE42X41gbP": {
+        "cluster": "Adrastea Validator",
+        "validator": "Adrastea Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4jEHuQZTNTRYAhxRYEjV3HJ1b4wqdQjnBRdPzFWzkCft": {
+        "cluster": "Moise",
+        "validator": "Moise",
+        "source": [
+            "singleton"
+        ]
+    },
+    "47hzyKgoz9Fu1HP4mR48tvAFj7akCFZKGzZqWo32sNqG": {
+        "cluster": "Maera",
+        "validator": "Maera",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FRTcwF2LHHLV2VxKB9nzNpqyBXjpKvkEs5aRuMXrrk8X": {
+        "cluster": "Calypso",
+        "validator": "Calypso",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AiDoLYTz5CVN3ZLzqDWRtaGUaHGzDnWMeC6KCNYJPqFX": {
+        "cluster": "Aidol",
+        "validator": "AiDoL",
+        "source": [
+            "singleton"
+        ]
+    },
+    "528hi3StRe7uGjt99d35myh95JPc2MqBEHTPYcEhqMg5": {
+        "cluster": "Blueprint",
+        "validator": "Blueprint",
+        "source": [
+            "singleton"
+        ]
+    },
+    "23XqhxnRHt5gQWHowvyRHDX4Ky6BZyFdYxjTzxx2QEFr": {
+        "cluster": "Ottersec",
+        "validator": "OtterSec",
+        "source": [
+            "singleton"
+        ]
+    },
+    "LNRmxHyXAzgBkgxDmb4ZefwLAnSv3fdsjPgjmThoa1T": {
+        "cluster": "Banana Business (Bb)",
+        "validator": "Banana Business (BB)",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AGXZemZbyZjz5NBhufcob2pf8AXnr9HaGFUGNCfooWrB": {
+        "cluster": "Rockx",
+        "validator": "RockX",
+        "source": [
+            "singleton"
+        ]
+    },
+    "soLStAckuvkHtNzHF1cwmeSRG1FzVxKxwsdWZ1yrHrz": {
+        "cluster": "Solstack By Corvus Labs",
+        "validator": "SolStack by Corvus Labs",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8GbwASqdpw4dVcwbWUxbHXMrjyQx2aKkoBR5H1GJF8iD": {
+        "cluster": "Bitwise Onchain Solutions",
+        "validator": "Bitwise Onchain Solutions",
+        "source": [
+            "homepage"
+        ]
+    },
+    "AuGwcQWqWuNbnrkgERSp8VN6kZeJiM4AZuLMrwbkzg9m": {
+        "cluster": "Bitwise Onchain Solutions",
+        "validator": "Bitwise Onchain Solutions | Jito BAM",
+        "source": [
+            "homepage"
+        ]
+    },
+    "4YykTGwg94GgHZEPSsQfbaMaEE9HHAHqSuXT65L6C6wf": {
+        "cluster": "Rakurai | High Tps | High Rewards",
+        "validator": "Rakurai | High TPS | High rewards",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DKeL7T5t7XXKSbWpM3i9mkV9hRhqrEDbVVyL63AJ7TqE": {
+        "cluster": "Solary | 0% +Mev",
+        "validator": "Solary | 0% +MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7S9dHgoeMYvtShTjEC3x5D3THRDQz123WVGPseZsm3hm": {
+        "cluster": "Rocket",
+        "validator": "Rocket",
+        "source": [
+            "singleton"
+        ]
+    },
+    "1234LB7uvDC23rdCQoK8C3jNwnovUNyeKxz8wC3dghJ5": {
+        "cluster": "Bluelotus \ud83d\udc69\u200d\ud83d\udcbb",
+        "validator": "BlueLotus \ud83d\udc69\u200d\ud83d\udcbb",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EnRcbgr5r7EUS2P35szncy6TW6eWA9UQiU3yQRCDbh2P": {
+        "cluster": "Sec3",
+        "validator": "Sec3",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EcjtYtuxBuupjeyXNdttATwoQoNL5Ck7bmrqDCj3ALT4": {
+        "cluster": "Johndoe",
+        "validator": "johndoe",
+        "source": [
+            "singleton"
+        ]
+    },
+    "StepeLdhJ2znRjHcZdjwMWsC4nTRURNKQY8Nca82LJp": {
+        "cluster": "Step Finance",
+        "validator": "Step Finance",
+        "source": [
+            "singleton"
+        ]
+    },
+    "51JBzSTU5rAM8gLAVQKgp4WoZerQcSqWC7BitBzgUNAm": {
+        "cluster": "Kraken",
+        "validator": "Kraken 2",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "KRAKEnMdmT4EfM8ykTFH6yLoCd5vNLcQvJwF66Y2dag": {
+        "cluster": "Kraken",
+        "validator": "Kraken",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "1ggyFRMuSB33BM6oNiDTt9YovbJnYoVow6yEsHhkaFh": {
+        "cluster": "Iggyz",
+        "validator": "Iggyz",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DumiCKHVqoCQKD8roLApzR5Fit8qGV5fVQsJV9sTZk4a": {
+        "cluster": "Staking Facilities | Mev \ud83d\udd25",
+        "validator": "Staking Facilities | MEV \ud83d\udd25",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7sBYPueerpq3kKjmuimJkGr7jmiM8ZZ74pXPMEcBSxo5": {
+        "cluster": "Inframesh",
+        "validator": "InfraMesh",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AX6v1G9GH7FNcoX6ogNyoD2fZiLaNps7heL9RrGUYGC8": {
+        "cluster": "Falconx",
+        "validator": "FalconX",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7qTwituXJJ5dtUwBZXjMNgtAyXJbx3X8V4B9gXFRjK9d": {
+        "cluster": "P2P.Org",
+        "validator": "P2P.org Labs",
+        "source": [
+            "homepage"
+        ]
+    },
+    "xBLpiTwufjcuFCjbk4aCmFy7HUY5D9xy8L1EX2rBwmC": {
+        "cluster": "P2P.Org",
+        "validator": "P2P.org Turbo",
+        "source": [
+            "homepage"
+        ]
+    },
+    "RSSAw6n7Tvqi5iJc2xvHMfk1bhx47GVqj2pj1bq5NUq": {
+        "cluster": "Rssa Validator",
+        "validator": "RSSA validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AfyTzhTXBRBCxGdTEMc9LNEkVGVGfGA9wHf1VikaNb37": {
+        "cluster": "Fthr Validator",
+        "validator": "Fthr Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8yPiZWMNYMhEqTmPSRc6LsWLFC8pewYEzmgc5kRCLTrZ": {
+        "cluster": "Limitless Systems",
+        "validator": "Limitless Systems",
+        "source": [
+            "singleton"
+        ]
+    },
+    "dcntrKBwh8j5yL62Eg96Z5QjJWv3UXxMu4rqL82w6Cb": {
+        "cluster": "Decentra",
+        "validator": "Decentra",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9bb63m29Xy1KiWqijLs3f8adTE4KcSmVkt1qPxGkbkna": {
+        "cluster": "Vault",
+        "validator": "Vault",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DMSuZcavta8L1w1tSiH8bALWjz6Q6KSryGG6m6Az4Qt5": {
+        "cluster": "Lion3D | 0% Forever + Block Rewards Sharing",
+        "validator": "Lion3d | 0% Forever + Block Rewards Sharing",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mintrNtxN3PhAB45Pt41XqyKghTTpqcoBkQTZqh96iR": {
+        "cluster": "Hanabi Staking \ud83c\udf86 | Staking Champions | Doublezero | \u274cBam",
+        "validator": "Hanabi Staking \ud83c\udf86 | Staking Champions | DoubleZero | \u274cBAM",
+        "source": [
+            "singleton"
+        ]
+    },
+    "F1wBgGku883aGGCQYMQFR4PmdJ7faej3qKSk8xGCycP7": {
+        "cluster": "Selfliquidity",
+        "validator": "SelfLiquidity",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3jkJVgfz1zrHSy6YLK6g96eTj49kCnDj2i8AbbKLZhkk": {
+        "cluster": "Node1",
+        "validator": "Node1",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8hPk5CbKDoM7dN9LssTdVkFhDykeq7A8CZurA5AQSFJH": {
+        "cluster": "Bybit Staking",
+        "validator": "Bybit Staking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DdCNGDpP7qMgoAy6paFzhhak2EeyCZcgjH7ak5u5v28m": {
+        "cluster": "Kiln",
+        "validator": "Kiln1",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "HCvnhbT3Sn5RsueDisWzzn5FkW8tAqoQK1dr7cvAVzin": {
+        "cluster": "Kiln",
+        "validator": "Kiln2",
+        "source": [
+            "homepage",
+            "name"
+        ]
+    },
+    "GptPXjYUBUjxpRmueH6F5JcqizvjPTRDShTJQ8Vp6uN1": {
+        "cluster": "Maxfillipov",
+        "validator": "maxfillipov",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AVD61fbwxDGuLGCanPWQPxRjdqYk3icssz5u7JH8kbta": {
+        "cluster": "Raiku",
+        "validator": "Raiku",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EeitHdhXPu3pYMb5oPHvLjkaKQMUPzdNnxvrXc3EEHxj": {
+        "cluster": "Stss Validator",
+        "validator": "STSS Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AursLzSguMy6DM3Vb6aoa4teC74hnujxq8LvN5Up4hHJ": {
+        "cluster": "Aursen",
+        "validator": "Aursen",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Ebm1XKkMzaFg2L5rzLPBnFHMtpDPa6SWJ7nVUzZUmXmR": {
+        "cluster": "Soldea Kitchen",
+        "validator": "Soldea Kitchen",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Gotas1PRPrkqqSNm1ZKcn8Tpx9qL8krSQzTZ5DPKzkFX": {
+        "cluster": "Gotas",
+        "validator": "Gotas",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2iWXwF2Q5W6o7yntV2mkbxncB4rYHnX61y3NU8a8EFMJ": {
+        "cluster": "Defi Dev Corp (Nasdaq: Dfdv)",
+        "validator": "DeFi Dev Corp (NASDAQ: DFDV)",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mythxna3hpzXSbaseyR12vu5Vvym1HxS92eCgXLvY7w": {
+        "cluster": "Mythx",
+        "validator": "Mythx",
+        "source": [
+            "singleton"
+        ]
+    },
+    "B1rsc6jv3RsFpkak8qvJN3PfGYSg9E3Uw1joaV1EoiFj": {
+        "cluster": "Revtec | 100% Block Reward",
+        "validator": "RevTec | 100% Block Reward",
+        "source": [
+            "singleton"
+        ]
+    },
+    "hsdtGUwm6TeePfXWgHqLpiLEijvnz177fxHf61BfsLT": {
+        "cluster": "Sol Prime",
+        "validator": "SOL Prime",
+        "source": [
+            "singleton"
+        ]
+    },
+    "fuyugZxM5S4NyV3ZYoc6ebs3fmRTrZ3X27MKCFvHpVD": {
+        "cluster": "Kisetsu Stake",
+        "validator": "Kisetsu Stake",
+        "source": [
+            "singleton"
+        ]
+    },
+    "LodezVTbz3v5GK6oULfWNFfcs7D4rtMZQkmRjnh65gq": {
+        "cluster": "The Lode (Sentries)",
+        "validator": "The Lode (Sentries)",
+        "source": [
+            "singleton"
+        ]
+    },
+    "C616NHpqpaiYpqVAv619QL73vEqKJs1mjsJLtAuCzMX6": {
+        "cluster": "Stakeware.Xyz | Ferric",
+        "validator": "stakeware.xyz | ferric",
+        "source": [
+            "singleton"
+        ]
+    },
+    "MajorF3gAYEmUhqkoRXoL546Zim8nMa82tuUTz9LkmE": {
+        "cluster": "Harmonic Major",
+        "validator": "Harmonic Major",
+        "source": [
+            "singleton"
+        ]
+    },
+    "76nwV8zz8tLz97SBRXH6uwHvgHXtqJDLQfF66jZhQ857": {
+        "cluster": "Forbole",
+        "validator": "Forbole",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Fe5zMqkmoYbwnXH9RHjFy7YMRnak9so2bzPBroPJ4iiX": {
+        "cluster": "Moutai",
+        "validator": "U1S1 Validator \ud83d\ude80 Performant, Secure and NO Fees",
+        "source": [
+            "homepage"
+        ]
+    },
+    "HdQ1Ap8wm6Mz65FaP8jMNBVfCDv5T9NdS8UTSvHmcotn": {
+        "cluster": "Moutai",
+        "validator": "Moutai Validator \ud83d\ude80 Performant, Secure and NO Fees",
+        "source": [
+            "homepage"
+        ]
+    },
+    "DzPT1ZWDeURdTj38QBSceWnrpYFxZRBLPRXmUgHVDAGR": {
+        "cluster": "Moutai",
+        "validator": "YYDS Validator \ud83d\ude80 Performant, Secure and NO Fees",
+        "source": [
+            "homepage"
+        ]
+    },
+    "DierScgiTrz5AM7mddeJLHYNvafym3XhjjdM51AnKevU": {
+        "cluster": "Mavan",
+        "validator": "MAVAN",
+        "source": [
+            "homepage"
+        ]
+    },
+    "FnAPJkzf19s87sm24Qhv6bHZMZvZ43gjNUBRgjwXpD4v": {
+        "cluster": "Mavan",
+        "validator": "MAVAN Infrastructure",
+        "source": [
+            "homepage"
+        ]
+    },
+    "3Z1N2Fkfha4ThNiRwN8RnU6U8dkFJ92DH2TFyLWJf8cj": {
+        "cluster": "Lumlabs",
+        "validator": "LumLabs",
+        "source": [
+            "singleton"
+        ]
+    },
+    "MS1kjUoVPfy4AgyJLiJ3eC6Gv34Cwr839MryJgNKdwJ": {
+        "cluster": "Toshi Css",
+        "validator": "Toshi CSS",
+        "source": [
+            "singleton"
+        ]
+    },
+    "sT34kbaqmHWbPwjhyeG1GnjoX82KpXawFsnzUkzJpYX": {
+        "cluster": "Steakstache",
+        "validator": "SteakStache",
+        "source": [
+            "singleton"
+        ]
+    },
+    "he1iusunGwqrNtafDtLdhsUQDFvo13z9sUa36PauBtk": {
+        "cluster": "Helius",
+        "validator": "Helius",
+        "source": [
+            "singleton"
+        ]
+    },
+    "vahVByZszdHguLa7U7GLz8UdUFN85mcwdkefiqVjtGt": {
+        "cluster": "Stakeiteasy\ud83d\ude80High Apy + 0% Fee\u2705 + Mev\ud83d\udd25",
+        "validator": "StakeITeasy\ud83d\ude80High APY + 0% fee\u2705 + MEV\ud83d\udd25",
+        "source": [
+            "singleton"
+        ]
+    },
+    "89DXJe6XTDASsmyXJoPyRetLq1csRj9N2Bwn67fNvYGt": {
+        "cluster": "Blossom",
+        "validator": "Blossom",
+        "source": [
+            "singleton"
+        ]
+    },
+    "pt1LsjkNwqCKdYYfc35ToDkqtEG9pswLTJNaMo8inft": {
+        "cluster": "Parafi Technologies",
+        "validator": "ParaFi Technologies",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SANDhe6azby4EMLJd8N77QTk5K92n2tCi4NXba7iwuc": {
+        "cluster": "Goldsand",
+        "validator": "Goldsand",
+        "source": [
+            "singleton"
+        ]
+    },
+    "bookLxG3LkSmt4htJ1x9zPw6E34RRMAi7sUn5mM3CNN": {
+        "cluster": "The Library",
+        "validator": "The Library",
+        "source": [
+            "singleton"
+        ]
+    },
+    "1LinkCP4qUqGvUiNuAWhAxQyopdBxsh4vhfLBb4apyR": {
+        "cluster": "Onelink Solutions",
+        "validator": "OneLink Solutions",
+        "source": [
+            "singleton"
+        ]
+    },
+    "PineDoC593nrX16W8ZLWfF5Evb6otv7fRfZMLjPAHe3": {
+        "cluster": "Pine Stake",
+        "validator": "Pine Stake",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9RXDftY5xyhtYyzk4z7U9ddvBF2Z8DMfXmV6P6du9dxS": {
+        "cluster": "Kast",
+        "validator": "KAST",
+        "source": [
+            "singleton"
+        ]
+    },
+    "STevE9xVb1QfBHU4GgEn28r9oikAf5yxKJddF7fufwb": {
+        "cluster": "Steve",
+        "validator": "STEVE",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BLADE1qNA1uNjRgER6DtUFf7FU3c1TWLLdpPeEcKatZ2": {
+        "cluster": "Shinobi Systems \ud83d\ude80 Stakeview.App",
+        "validator": "Shinobi Systems \ud83d\ude80 stakeview.app",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8EVaZkBcoJAAyyRZfozNAnZiEopgPvnixx5Ja5PpVDae": {
+        "cluster": "Solove",
+        "validator": "SoLove",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GW8GgoeBpLM4TpeR2ePVcYYSoySBaKJgt2JiwoyjXRz3": {
+        "cluster": "Luke",
+        "validator": "Luke",
+        "source": [
+            "singleton"
+        ]
+    },
+    "juicQdAnksqZ5Yb8NQwCLjLWhykvXGktxnQCDvMe6Nx": {
+        "cluster": "Prostaking",
+        "validator": "ProStaking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "H1SztaSNXFAYGRS7tL4APK7b6XmpXSx6L5C8h2YGtXnD": {
+        "cluster": "Speedlanding Validator",
+        "validator": "Speedlanding Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9tedbEYypEKXAMkHcg42rn3fXY1B8hB6cdE3ZTFouXLL": {
+        "cluster": "Stake.Systems",
+        "validator": "stake.systems",
+        "source": [
+            "singleton"
+        ]
+    },
+    "StakeyJXE1yJbEApBVswHN4JdZXcj7V5MHbzffa4dFp": {
+        "cluster": "Stake.Org",
+        "validator": "Stake.org",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Cer1umMkC6cvRGKKLP3QwxsdxsgxmC1EhqMhB1mqVvYZ": {
+        "cluster": "\ud83d\udd25\ud83d\udc83\ud83c\uddf8\ud83c\uddec Ceriumxyz",
+        "validator": "\ud83d\udd25\ud83d\udc83\ud83c\uddf8\ud83c\uddec CeriumXYZ",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4269foF8CYyT8SynFSYHiKFzHva5YL6PoAQj9pH3mQmh": {
+        "cluster": "Mice Stakin'",
+        "validator": "Mice Stakin'",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GdSJPrzj8q1QJV53s1cHMcpbPhodgB9kjG7X9kq8Z56r": {
+        "cluster": "Gxfc Validator",
+        "validator": "GXFC Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8uEgdseqbUrDLfmHbUpTHoH1LLRxeViYDk7K6NdXKRYM": {
+        "cluster": "Hamsa",
+        "validator": "Hamsa",
+        "source": [
+            "singleton"
+        ]
+    },
+    "kaosFcskhYZCQidKKmkUSQLAqwpz3vtPpyyZ67N5NwA": {
+        "cluster": "Aepalizage",
+        "validator": "Aepalizage",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ReFiSbuMcV8PMYcpvm9RmHDhF9HR3qyxsHZgf359NUx": {
+        "cluster": "Refi Hub",
+        "validator": "ReFi Hub",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5AC692spnjbegP7ttCXJEzUe8S81sLYsqJd8Ae6Zv1xU": {
+        "cluster": "Majestysol | \ud83d\udd25 0% Fee + \u26a1 Mev",
+        "validator": "Majestysol | \ud83d\udd25 0% Fee + \u26a1 MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "78QvBqfkWbDbyo1DMb2ku42r1UfxecwptjbPWJqxkX6E": {
+        "cluster": "Appleyello",
+        "validator": "Appleyello",
+        "source": [
+            "singleton"
+        ]
+    },
+    "STeaKrJdxdPMww27XJsjRBfrzqfjFT1BxotgQtFyDgx": {
+        "cluster": "Steak.Net \ud83e\udd69",
+        "validator": "STEAK.NET \ud83e\udd69",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6aow5rTURdbhbeMDrFrbP2GR5vZjMEhktEy87iH1VGPs": {
+        "cluster": "Luganodes",
+        "validator": "Luganodes",
+        "source": [
+            "singleton"
+        ]
+    },
+    "HJmfKJjKiyuuxFUuXgecgD5gdD312apCpHwZt6ETuRMU": {
+        "cluster": "Ghost",
+        "validator": "Ghost",
+        "source": [
+            "singleton"
+        ]
+    },
+    "J2nUHEAgZFRyuJbFjdqPrAa9gyWDuc7hErtDQHPhsYRp": {
+        "cluster": "Phantom Validator",
+        "validator": "Phantom Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "MFLKX9vSfWXa4ZcVVpp4GF64ZbNUiX9EjSqtqNMdFXB": {
+        "cluster": "The Mindfolk",
+        "validator": "The Mindfolk",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BULKEEKf9Hjy4nwCthjzheEk4joH23LLXttAHjqEZmB2": {
+        "cluster": "Bulk",
+        "validator": "BULK",
+        "source": [
+            "singleton"
+        ]
+    },
+    "D4Em5FzPmCNTyawCYfk3zLeDTmefk7ZPfdhyJfdjLdcZ": {
+        "cluster": "Landx",
+        "validator": "LANDX",
+        "source": [
+            "singleton"
+        ]
+    },
+    "21oUQzzytWh6y3G3SQ7ehktMh1RrbsJNA4R5pAMNyyrG": {
+        "cluster": "Range",
+        "validator": "Range",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3QPGLackJy5LKctYYoPGmA4P8ncyE197jdxr1zP2ho8K": {
+        "cluster": "Andrewinua",
+        "validator": "AndrewInUA",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mrgn2vsZ5EJ8YEfAMNPXmRux7th9cNfBasQ1JJvVwPn": {
+        "cluster": "Project 0",
+        "validator": "Project 0 Horizon",
+        "source": [
+            "homepage"
+        ]
+    },
+    "mrgn4t2JabSgvGnrCaHXMvz8ocr4F52scsxJnkQMQsQ": {
+        "cluster": "Project 0",
+        "validator": "Project 0 Meridian",
+        "source": [
+            "homepage"
+        ]
+    },
+    "686JcEJ98r8fMtUiVuKiz4WRoBpJ2Sm9zMhdc2b6H4bu": {
+        "cluster": "A Unicorn Julia",
+        "validator": "A Unicorn Julia",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5sMmkL4BXjU6vZXQxE3RquH2CR8v8Zbfi1EAAFxLfxMx": {
+        "cluster": "Alpha",
+        "validator": "Alpha",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CCxSNvJogH6LWyoiEbG7JfcWybw2FqqCExs5GuemChGr": {
+        "cluster": "Validatore",
+        "validator": "Validatore",
+        "source": [
+            "singleton"
+        ]
+    },
+    "LiFiDDUsf6GCRHwkHzW4YnR1QErj99MAU9diwb8TvWk": {
+        "cluster": "Li.Fi",
+        "validator": "LI.FI",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4GEEKSwzc242QKF1uzzodpFaxb4GShQEZhkZfeXd27Vi": {
+        "cluster": "Sol4Geeks",
+        "validator": "Sol4Geeks",
+        "source": [
+            "singleton"
+        ]
+    },
+    "P1TCHYwYPsNaNUK6fGkZzwXPjnYAMYRnUUv4c1TREee": {
+        "cluster": "Depitch Academy",
+        "validator": "DePitch Academy",
+        "source": [
+            "singleton"
+        ]
+    },
+    "chopjqMvdGWRcrcuC1r8LmAzz9obXi1gSYPYM6zimWa": {
+        "cluster": "Choplet Studios",
+        "validator": "Choplet Studios",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FwLsjPJdnSiuCvs1NXyR1cV6Sw5GRE6Lj2s1gZ9NNTmv": {
+        "cluster": "Cybervillage",
+        "validator": "CyberVillage",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6W8yrMwtDU5G6ErazhZHfLjqZV8cMvajpSRGYgrZ3d4v": {
+        "cluster": "Legends",
+        "validator": "Legends",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FrkdQrmL2Qn3bgYpzajQDK2k7gRNNmsQNBXvm4mWz9uk": {
+        "cluster": "Xstake Validator",
+        "validator": "XStake Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8B2Z2R8dRvqFcXuLBwinu3Jq7HQidCaJCnDuRRqeJLC1": {
+        "cluster": "Watatsumi Validator",
+        "validator": "Watatsumi Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "gVot34jauJpexBL2YUSPBKsmZ4V2ffmDcRk4yfSEnx8": {
+        "cluster": "Guardian Validator",
+        "validator": "Guardian Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AAAAQwH5KManM6mbxGLc1m1XnWcRBFDmdUgpZ4Ww621j": {
+        "cluster": "11Ama Validator",
+        "validator": "11ama Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SWiz8fJt7CV99Uv9VZTLGAkMP3vTpc6u7ZqNN5dsWXU": {
+        "cluster": "Boop Wizard",
+        "validator": "BOOP Wizard",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GB44NXtM7zGm6QnzQjzHZcRKSswkJbox8aJsKiXGbFJr": {
+        "cluster": "Rustiq Technology",
+        "validator": "Rustiq Technology",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BN6EvLCeuYdrTjGaHCyugF7sSH5uckoVoy3Kg2TkyuDW": {
+        "cluster": "Sygnum Validators",
+        "validator": "Sygnum Validators",
+        "source": [
+            "singleton"
+        ]
+    },
+    "anza1Vgz2kcN9Qo6ECvf43v8RxBzQ7UpvxFoxJtLmGz": {
+        "cluster": "Anza",
+        "validator": "Anza",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Gar9q7Ru2sKfVxFnR5xmV8GieJeUSTp7Uf3ixai9BQKS": {
+        "cluster": "Eac",
+        "validator": "EAC",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2het6nBRLq9LLZER8fqUEk7j5pbLxq2mVGqSse2nS3tf": {
+        "cluster": "Mcf",
+        "validator": "MCF",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9KgZYnDzHhQANoJ43Z8czkgXYdTjtWLRrH9nDf42gqa": {
+        "cluster": "Pacific Meta",
+        "validator": "Pacific Meta",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4tuMshQNpAFpy1YtEHnSsE5EPN1mAT8FevWvn2UPJHNM": {
+        "cluster": "\ud83c\udf38 Solgirl Mev \u26a1\ufe0f\ud83d\udc69\u200d\ud83d\udcbb",
+        "validator": "\ud83c\udf38 SOLGirl MEV \u26a1\ufe0f\ud83d\udc69\u200d\ud83d\udcbb",
+        "source": [
+            "singleton"
+        ]
+    },
+    "vvvvXsU6iG2enDVvs4KeVqS4YrZczTujSv5p3dSeNHx": {
+        "cluster": "Pesky Penguins \ud83d\udd25\ud83d\udc83 Noot Noot",
+        "validator": "Pesky Penguins \ud83d\udd25\ud83d\udc83 NOOT NOOT",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9Diao4uo6NpeMud7t5wvGnJ3WxDM7iaYxkGtJM36T4dy": {
+        "cluster": "Firedancer Development",
+        "validator": "Firedancer Development",
+        "source": [
+            "singleton"
+        ]
+    },
+    "jag77EXci8uf5uGmKE5izaYvxBCS5H9U2rxWYh8BUUf": {
+        "cluster": "Jaguar",
+        "validator": "Jaguar",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FrtCZRajYfrdoZarPxCsUB6f66ga5DPSXGz4F7VKyfKP": {
+        "cluster": "Neumann",
+        "validator": "Neumann",
+        "source": [
+            "singleton"
+        ]
+    },
+    "21wUViiyG1g47VZ39ZZsSkFX9nu6bkyfy6jryHGD2TUB": {
+        "cluster": "Easytoken.Me",
+        "validator": "Easytoken.me",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2ayMCC4aizr8RGg5ptXYqu8uoxW1whNek1hE1zaAd58z": {
+        "cluster": "Lifinity Protocol",
+        "validator": "Lifinity Protocol",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5CBkJdDPMWCmss3Y48B36w78Bgxur4mDib6tQ9yMKe1B": {
+        "cluster": "Tdrsys",
+        "validator": "TdrSys",
+        "source": [
+            "singleton"
+        ]
+    },
+    "kyvvvkDpDCtSxQMPhzRhmv14DgUBVEGGzn8Dnb8ircP": {
+        "cluster": "Kyzzen",
+        "validator": "Kyzzen",
+        "source": [
+            "singleton"
+        ]
+    },
+    "A9mzXPB6sRNUXcDF9L91oV1EvmeYQe7WzSfEL7fBdysh": {
+        "cluster": "Dflow",
+        "validator": "DFlow",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CatzoSMUkTRidT5DwBxAC2pEtnwMBTpkCepHkFgZDiqb": {
+        "cluster": "Jupiter",
+        "validator": "Jupiter",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Ec55BotYhWgC3xRmZ2UpuJvyySwxZeUrvEDPrxxG7r9B": {
+        "cluster": "Qubitnexus",
+        "validator": "QubitNexus",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DyDjFYB6i51FMHQvB4eKSwGHmgMxVf1i3FWwANAngqyY": {
+        "cluster": "Solana Qubits",
+        "validator": "Solana Qubits",
+        "source": [
+            "singleton"
+        ]
+    },
+    "R2D2vs3bJwpNF2ejaB6UW1JdCZ5VstuAmuwxDuUUWNj": {
+        "cluster": "\ud83e\udd16 Roborun.Xyz",
+        "validator": "\ud83e\udd16 RoboRun.xyz",
+        "source": [
+            "singleton"
+        ]
+    },
+    "b1uei1YN8YVb3qHy2JitBx4Fq9nAatLQFcNbnk6Ex8p": {
+        "cluster": "Blue Sky",
+        "validator": "Blue Sky",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9ymU1ayh9mZVyDL4dUUtXKtX1wCaFNzZPGutLJgqzuC1": {
+        "cluster": "Sunshinevr",
+        "validator": "SunshineVR",
+        "source": [
+            "singleton"
+        ]
+    },
+    "qjUuLxWo29QCBr7ZQw4EPLkAtmjHS2ZdZpZcH9g7fRb": {
+        "cluster": "Alien \ud83d\udc7d 0% +Mev Rewards",
+        "validator": "Alien \ud83d\udc7d 0% +Mev rewards",
+        "source": [
+            "singleton"
+        ]
+    },
+    "26pV97Ce83ZQ6Kz9XT4td8tdoUFPTng8Fb8gPyc53dJx": {
+        "cluster": "Ledger By Figment",
+        "validator": "Ledger by Figment",
+        "source": [
+            "singleton"
+        ]
+    },
+    "XzMLju7T6BSSngmsPogeuryd6uswiimkPU87gB2chho": {
+        "cluster": "7Zm1Pe4Fubfyzdyaq5Labh3A4Cxdcvve1S3Wcrgeaz84",
+        "validator": "7Zm1pE4FubFYZDyAQ5Labh3A4cxDcvve1s3WCRgEAZ84",
+        "source": [
+            "singleton"
+        ]
+    },
+    "57QggzHa8AEELBU3C8RG567oGmbG6VyoX5jsi6M3gaHp": {
+        "cluster": "Beachside",
+        "validator": "Beachside",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9gANMngbGUmAaLXL1RC3JdiaLjRowJXNbzCTh53ht7mq": {
+        "cluster": "Yurbason",
+        "validator": "Yurbason",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3r5ZXC1yFqMmk8VwDdUJbEdPmZ8KZvEkzd5ThEYRetTk": {
+        "cluster": "Vnode",
+        "validator": "Vnode",
+        "source": [
+            "singleton"
+        ]
+    },
+    "goJiRADNdmfnJ4iWEyft7KaYMPTVsRba2Ee1akDEBXb": {
+        "cluster": "Gojira",
+        "validator": "Gojira",
+        "source": [
+            "singleton"
+        ]
+    },
+    "uTnZDhnbiSV3TX2obj71nFPAm2aXy83mFTFYzaBRk34": {
+        "cluster": "Some Name",
+        "validator": "some name",
+        "source": [
+            "singleton"
+        ]
+    },
+    "H9p8zGs56CnL4b7RrbwQ6htc6V4K8PUtKvqH2m7hYAtL": {
+        "cluster": "Nodtech",
+        "validator": "nodtech",
+        "source": [
+            "singleton"
+        ]
+    },
+    "D3wscqsBCJGFzzoB7dB7wQfJzSEFVzu8Rxugfnfk7rdm": {
+        "cluster": "Orbyval",
+        "validator": "Orbyval",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2ZP7DPXW6gwMRSY9PSXQ75fZLrk4gKWKnT85pK5sVPa5": {
+        "cluster": "Tinydancer",
+        "validator": "Tinydancer",
+        "source": [
+            "singleton"
+        ]
+    },
+    "LunaFpQkZsZVJL2P2BUqNDJqyVYqrw9buQnjQtMLXdK": {
+        "cluster": "Lunanova",
+        "validator": "LunaNova",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GA2t11gJcmuZ4y7pShTzgYDkxVaJaVQJqkVUqojhPPsT": {
+        "cluster": "Solbrothers",
+        "validator": "SolBrothers",
+        "source": [
+            "singleton"
+        ]
+    },
+    "MicobSZgB9CZNvmnFSYbEtMjy7CUui5o6P3XoGTwZC5": {
+        "cluster": "Micobo",
+        "validator": "MICOBO",
+        "source": [
+            "singleton"
+        ]
+    },
+    "TRAMp1Z9EXyWQQNwNjjoNvVksMUHKioVU7ky61yNsEq": {
+        "cluster": "Tramplin",
+        "validator": "Tramplin",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9QFvZhLvpbcFJTPkKq5wTWR2DGTXqrsP8z9igPgjSsZ1": {
+        "cluster": "Stakechain",
+        "validator": "StakeChain",
+        "source": [
+            "singleton"
+        ]
+    },
+    "unRgBLTLNXdBmenHXNPAg3AMn3KWcV3Mk4eoZBmTrdk": {
+        "cluster": "Unruggable",
+        "validator": "Unruggable",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mesh3Px7WMi7Dkxke4ZZBULoKHM6sp37wKtg4DwPqPY": {
+        "cluster": "Mesh Validator",
+        "validator": "Mesh Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6hcGvZypizjf6PPsxboshZHRqefyQKSG9L8vZqYdm7UY": {
+        "cluster": "Onchain Divers",
+        "validator": "Onchain Divers",
+        "source": [
+            "singleton"
+        ]
+    },
+    "26RGqX3mezgYDxJnGh94gnMM4L2k9grH1eWcTSCHnaxR": {
+        "cluster": "\ud83d\udca5Infinitesol\ud83d\udca5 0% Fees",
+        "validator": "\ud83d\udca5InfiniteSOL\ud83d\udca5 0% Fees",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4QQqaHgJfrpaS8aU47CkmgAMimGnxiphgwhqzQrotjQU": {
+        "cluster": "Validatize Validator",
+        "validator": "Validatize Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4PL2ZFoZJHgkbZ54US4qNC58X69Fa1FKtY4CaVKeuQPg": {
+        "cluster": "Block Parliament \ud83e\udd89",
+        "validator": "Block Parliament \ud83e\udd89",
+        "source": [
+            "singleton"
+        ]
+    },
+    "NoditP9RMZTVKS71xDUEXUvoemvVxFnXVnXqEnSsbFB": {
+        "cluster": "Nodit",
+        "validator": "Nodit",
+        "source": [
+            "singleton"
+        ]
+    },
+    "QXmsTYFK7YT2BpP2AnvXwuRpfwmsJZpovLcUqdSjoK1": {
+        "cluster": "Honeybee \ud83d\udc1d +Jito",
+        "validator": "Honeybee \ud83d\udc1d +Jito",
+        "source": [
+            "singleton"
+        ]
+    },
+    "C8MLmDCg3LReWoNCkFdHgsscFpHx2WdtcU9ZziNfXrhd": {
+        "cluster": "Evasmainnet",
+        "validator": "EvasMainnet",
+        "source": [
+            "singleton"
+        ]
+    },
+    "57GUg9QH2LFMV11oaduuoqVJ5qHDEp7EGJ2xgkGiqAum": {
+        "cluster": "Anarcheuz",
+        "validator": "anarcheuz",
+        "source": [
+            "singleton"
+        ]
+    },
+    "ViKLknQuks11DLEjZ7Y2aNYAAT7Q3NTKLGxs8rdnLVi": {
+        "cluster": "Lightnode",
+        "validator": "LightNode",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2QE9X9X4tdDUTYic1DgBBJjU7cWUNPbKYGerCb9KqDQN": {
+        "cluster": "Val37",
+        "validator": "val37",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Mxv1Ubm71XoUvxrN3qjN8ii6Bh5b43NuuKywsWx6ox2": {
+        "cluster": "Mx Validator",
+        "validator": "MX Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2HQ5YHuw8cR1erRYZmemDmQVpfEMCjAvwU7V4fgdemJB": {
+        "cluster": "Gate Earn",
+        "validator": "Gate Earn",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DeEpSdaw8uBLQ5T2HQhDf8fBSVbm13jGqJwoSF3HTpL5": {
+        "cluster": "Deepstake",
+        "validator": "DeepStake",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CcaHc2L43ZWjwCHART3oZoJvHLAe9hzT2DJNUpBzoTN1": {
+        "cluster": "Figment",
+        "validator": "Figment",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GMpKrAwQ9oa4sJqEYQezLr8Z2TUAU72tXD4iMyfoJjbh": {
+        "cluster": "Moonlet",
+        "validator": "Moonlet",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4Q1khZnsdtNyQjUCpYPBDYyogui8b9x1MWtKNdaPiJdv": {
+        "cluster": "3Sdk",
+        "validator": "3SDK",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FQwewNXahV7MiZcLpY6p1xhUs2acVGQ3U5Xxc7FzV571": {
+        "cluster": "Blockdaemon \ud83e\uddf1\ud83d\udc7f Validator",
+        "validator": "Blockdaemon \ud83e\uddf1\ud83d\udc7f Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6n8taYki7RscA1XW7xGmevLcqj855oSgDgjPe1dZyHfW": {
+        "cluster": "Table Rock Jungle Lodge",
+        "validator": "Table Rock Jungle Lodge",
+        "source": [
+            "singleton"
+        ]
+    },
+    "THWfRpcJSC7oDrNMSCcixTZmCHVBTEVQL4qnd1UTD1x": {
+        "cluster": "Thw Validator",
+        "validator": "THW Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Simpj3KyRQmpRkXuBvCQFS7DBBG6vqw93SkZb9UD1hp": {
+        "cluster": "Simpdigit",
+        "validator": "Simpdigit",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DG6fVEB2Qy1jntvHVPui3R12CMqcwNNnjYPYdsbQ9ACP": {
+        "cluster": "Ily\u2661 Validator \u2795 Firedancer\ud83d\udd25 ||Neochibi Culture X:@Ily_Validator",
+        "validator": "ILY\u2661 Validator \u2795 Firedancer\ud83d\udd25 ||neochibi culture X:@ILY_validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FdGcvmbpebUwYA3vSywnagsaC3Tq3pAVmcR6VoxVcdV9": {
+        "cluster": "Globalstake [Bare Metal]",
+        "validator": "GlobalStake [Bare Metal]",
+        "source": [
+            "singleton"
+        ]
+    },
+    "avnu2RYyQbLL4LQnwi7ismwDNaegnXeUEzvZb2FUptF": {
+        "cluster": "Avnu",
+        "validator": "AVNU",
+        "source": [
+            "singleton"
+        ]
+    },
+    "J1to2NAwajc8hD6E6kujdQiPn1Bbt2mGKKZLY9kSQKdB": {
+        "cluster": "Jito2 (Experimental)",
+        "validator": "Jito2 (Experimental)",
+        "source": [
+            "singleton"
+        ]
+    },
+    "538iREQi6JxNqDHsMJRAJJ1ZqDQ2tvYuS8tfhtb7BaGu": {
+        "cluster": "\ud83d\ude80\ud83d\ude80Super\ud83d\ude80\ud83d\ude80 Validator",
+        "validator": "\ud83d\ude80\ud83d\ude80Super\ud83d\ude80\ud83d\ude80 Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "chdv8H9fPfk2zFqSVaxRjsEo2qEDmswbju3BVgAHPNb": {
+        "cluster": "Ch Dev",
+        "validator": "CH Dev",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GEM1N1pCDGKiTa547eckcwuHWYMsUQeXgnXHfEZLDvpB": {
+        "cluster": "Gemini",
+        "validator": "Gemini",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SBLZib4npE7svxFA7AsD3ytdQAfYNb39c8zsU82AA2E": {
+        "cluster": "Solblaze",
+        "validator": "SolBlaze",
+        "source": [
+            "singleton"
+        ]
+    },
+    "PUFFiNkUHF2DMfbKeUcYTSQckDDtkswfxZCDv5WQqwp": {
+        "cluster": "Puffin",
+        "validator": "Puffin",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CAf8jfgqhia5VNrEF4A7Y9VLD3numMq9DVSceq7cPhNY": {
+        "cluster": "Chainflow",
+        "validator": "Chainflow",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6XiVWAyRpG7wGUQPVRd2XrYdgQVQyoQamd2J8XAmate": {
+        "cluster": "Solmate - Rockawayx Powered",
+        "validator": "Solmate - RockawayX powered",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4vqwZsEEEsKtSqqEWbLyFAciWg66jGLP9zrbcZ1Hsrxb": {
+        "cluster": "Solstice",
+        "validator": "Solstice",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DqbRPQXbN8GDKWZkKiHnRjiSKPqE3rQaNgTPxdLGPDMK": {
+        "cluster": "Axiom",
+        "validator": "Axiom",
+        "source": [
+            "singleton"
+        ]
+    },
+    "DCKYVqFDwUs5m2DhW9muK2EX86pootvWD8wXA4nSqDxU": {
+        "cluster": "Dicky",
+        "validator": "Dicky",
+        "source": [
+            "singleton"
+        ]
+    },
+    "shft7Fry1js37Hm9wq4dfwcZSp2DyKszeWMvEpjYCQ1": {
+        "cluster": "Blueshift",
+        "validator": "blueshift",
+        "source": [
+            "singleton"
+        ]
+    },
+    "TKMA1fBGq4M7gF2CNnhphX6vNateFc2cm2FL2mYwq7e": {
+        "cluster": "Tokamai",
+        "validator": "Tokamai",
+        "source": [
+            "singleton"
+        ]
+    },
+    "magiCChVWbehZ1e3XqQfLh164yUfQ8LnRWgSP9i4oFp": {
+        "cluster": "Magic Eden Validator",
+        "validator": "Magic Eden Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "HMV14UAuULSwqmZhsKHzaVkYAd94iWpEeURgbUegfQLc": {
+        "cluster": "Hello Moon",
+        "validator": "Hello Moon",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FLCrbfbwEhFARa8nK9rnZw8BVtKNAuHujh9EhWy5A4U4": {
+        "cluster": "Solanabull \ud83d\ude80",
+        "validator": "SolanaBull \ud83d\ude80",
+        "source": [
+            "singleton"
+        ]
+    },
+    "647eBPzfDqmSVEg5cQofnjzeFr7PfwvHcDEcb22JWA5X": {
+        "cluster": "Tomyum",
+        "validator": "TomYum",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Ec37CQZjwRgGnuMmUi3BnEBXS5Xa3siakAPxPkHtahSf": {
+        "cluster": "Validation Cloud",
+        "validator": "Validation Cloud",
+        "source": [
+            "singleton"
+        ]
+    },
+    "NoRDTy8jpkpjPR7yxahVdoEUPngbojPhFU5jb8TtY4m": {
+        "cluster": "Nordstar \u2b50 Reliable Staking +Mev",
+        "validator": "nordstar \u2b50 reliable staking +MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FiijvR2ibXEHaFqB127CxrL3vSj19K2Kx1jf2RbK4BWS": {
+        "cluster": "Trust Nodes",
+        "validator": "Trust Nodes",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SzNm2zDpK3eJmSYR21pRaQ5b4wQ37ecds6det5YCZFP": {
+        "cluster": "Solx +Mev",
+        "validator": "SolX +Mev",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EcLPNfLFgCkbcTuvdeQ85pnQMgAfBDqi2dkoNVPrSyr5": {
+        "cluster": "Bitcoin Suisse",
+        "validator": "Bitcoin Suisse",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6anBvYWGwkkZPAaPF6BmzF6LUPfP2HFVhQUAWckKH9LZ": {
+        "cluster": "4Block 0% Fee + Jito All Mev",
+        "validator": "4BLOCK 0% Fee + Jito All MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GZgVV7MMweKm11hh8z8Nui9kRo3VxUVr2qgmkDdtJesa": {
+        "cluster": "Gersia",
+        "validator": "GERSIA",
+        "source": [
+            "singleton"
+        ]
+    },
+    "pine9rHVDS1pjwdhYkx3vRyaAyRd5KPDKXZEXAqvxcX": {
+        "cluster": "Pine Analytics",
+        "validator": "Pine Analytics",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BeachiopjxQxL7CaHNSZsynApiZCKx9QFVtcWNz3jDBo": {
+        "cluster": "Solana Beach Validator",
+        "validator": "Solana Beach Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mnvkHm47ZmRKoSWuQZAfXLRiDPiKCq8PWkMWrp1Wwqe": {
+        "cluster": "Gripto",
+        "validator": "gripto",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9GJmEHGom9eWo4np4L5vC6b6ri1Df2xN8KFoWixvD1Bs": {
+        "cluster": "Block Logic +Mev +Triton",
+        "validator": "Block Logic +MEV +Triton",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3ZUQekqiZoybB57y49eqtvSaoonqDwuNbeqEGwN88JkQ": {
+        "cluster": "Paws\ud83d\udc3e 0% Fee/Mev",
+        "validator": "Paws\ud83d\udc3e 0% Fee/MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Luna8BkZNpZ9DKmszrZYPvFpTr4eJJfxxTnGDwTrYkv": {
+        "cluster": "Luna Labs",
+        "validator": "Luna Labs",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9f7dqiYNBZbgPesAnLeWnKCtxYHSfMg5x1EMZCJwVwG7": {
+        "cluster": "Prompt Logic",
+        "validator": "Prompt Logic",
+        "source": [
+            "singleton"
+        ]
+    },
+    "33JxTD3GkHU8zePNVNjJwEM9BFChWtzPdGFMwL4Ar6X7": {
+        "cluster": "Amber",
+        "validator": "Amber",
+        "source": [
+            "singleton"
+        ]
+    },
+    "NDf9Pv6TAxTDPR6ud3djsd2Ux1WS2m2YfTw4qEmSnQH": {
+        "cluster": "Astraeus",
+        "validator": "Astraeus",
+        "source": [
+            "singleton"
+        ]
+    },
+    "YE111yizdzBA7JQKMXjy9VSx1shKAczUbs3b3e6vKQH": {
+        "cluster": "Mellow Yellow",
+        "validator": "Mellow Yellow",
+        "source": [
+            "singleton"
+        ]
+    },
+    "A5ed2x2wEuHW8KsuhbSaTFU4CYT3WgHfQcwyQXz5SdDw": {
+        "cluster": "Certora Validator",
+        "validator": "Certora Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "NikGQUQqSLtsdHGGx7mQopojZcgd3N9uWFaZQ1r5EXn": {
+        "cluster": "Ncvalidator",
+        "validator": "NCValidator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EfnywDKqArxK6N6FS9ctsuzNdxfx3pzfXEQE5EevQ1SV": {
+        "cluster": "Project Super",
+        "validator": "Project Super",
+        "source": [
+            "singleton"
+        ]
+    },
+    "EtMSc3MvcDXUr6ChK5GxyFVwTxYA3zqP5XzjE9jwKvSV": {
+        "cluster": "\u4f5b\u91d1\u75af Solana Chinese Community",
+        "validator": "\u4f5b\u91d1\u75af Solana Chinese Community",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6SF5cmEXFFEmnFd5BwM4J6NkZhh3WfPkgmqdoAGjLLPX": {
+        "cluster": "Livechanger",
+        "validator": "livechanger",
+        "source": [
+            "singleton"
+        ]
+    },
+    "QodirbUG8AZQBWpHhPJPfjj1xg4AaQUZCVVtwT8YfPi": {
+        "cluster": "\ud83c\udf00Quantum Private!",
+        "validator": "\ud83c\udf00Quantum Private!",
+        "source": [
+            "singleton"
+        ]
+    },
+    "dzufrE42PJjNNRBstdmunAdeDToDA3Cax6WDpFVj36Y": {
+        "cluster": "Ibrl",
+        "validator": "IBRL",
+        "source": [
+            "singleton"
+        ]
+    },
+    "Ste11vRHQJyQjcTKrDbTWAYsTXkX6PCnoEw3mSH3u2k": {
+        "cluster": "Stellium",
+        "validator": "Stellium",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SmithX2hngQMZXVN36C6TsyjthTU3YnsALAs1MaDghV": {
+        "cluster": "Bluestone \ud83d\udc99",
+        "validator": "Bluestone \ud83d\udc99",
+        "source": [
+            "singleton"
+        ]
+    },
+    "abc1zP7ihWsgQW8z5YmfQNqMckJE5Dfx8fwUNMNVNkY": {
+        "cluster": "Algo|Stake",
+        "validator": "algo|stake",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2tucttroqFNXsrYeMBQ8LfzKNfgwT2rHBzAF6RzbbHEp": {
+        "cluster": "Okx Earn",
+        "validator": "OKX Earn",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BfxZj7ckfRGHxByn7aHgH2puyXhfjAUvULtRjJo4rd8C": {
+        "cluster": "Cryptology",
+        "validator": "Cryptology",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5DutFKQ8qPmbjFEmp31QH9JDYJXvwh9pma8ap5Phxk6H": {
+        "cluster": "Hinode Technologies",
+        "validator": "Hinode Technologies",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GREEDkpTvpKzcGvBu9qd36yk6BfjTWPShB67gLWuixMv": {
+        "cluster": "Greed Academy - Funding Education",
+        "validator": "GREED Academy - funding education",
+        "source": [
+            "singleton"
+        ]
+    },
+    "te1exfYnykh2cFGCwGSLQu26Dpr8n2PozvBqH5Eoi3K": {
+        "cluster": "Telemetry",
+        "validator": "Telemetry",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6cvBCfFXugkTqgSFVPvzhoWaLbhHWvZfSsZadWP5rryR": {
+        "cluster": "0Node.Io",
+        "validator": "0node.io",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5RCD4pZcKH3NHN4XHxvsnVAawSaConLgsZbreSN5dXpZ": {
+        "cluster": "Nena \ud83c\udf3b",
+        "validator": "NeNa \ud83c\udf3b",
+        "source": [
+            "singleton"
+        ]
+    },
+    "LimeNKYH66uR9BwnrPtxPbpqmkambxHVcutGoSaWPiq": {
+        "cluster": "Limechain",
+        "validator": "LimeChain",
+        "source": [
+            "singleton"
+        ]
+    },
+    "4QhNoG3PN1FXXFhAEA2QWdor6xjXvM9pjq6MXAUV8Zg2": {
+        "cluster": "Huglester",
+        "validator": "huglester",
+        "source": [
+            "singleton"
+        ]
+    },
+    "D9BcS9Fasxj7zNv3kP5rHErv7aFxihi5EBZo9xUqaHeh": {
+        "cluster": "Y8 Crypto",
+        "validator": "Y8 Crypto",
+        "source": [
+            "singleton"
+        ]
+    },
+    "mNyQrNRYAuL2CwNCGmCsmwj9EcG88Sf8hs5rCirZaUr": {
+        "cluster": "Winstake Labs",
+        "validator": "WinStake Labs",
+        "source": [
+            "singleton"
+        ]
+    },
+    "8zuMRTXThoPTTPLLvaiKiJshLLCqGMt9BdRjjCL19xBc": {
+        "cluster": "Dawnlabs | 0% Fee + Block Rewards Sharing",
+        "validator": "DawnLabs | 0% Fee + Block Rewards Sharing",
+        "source": [
+            "singleton"
+        ]
+    },
+    "5orRi4tMEGneZ9U2y381JnBEnsqFJDBSNQLhBn98Bkcv": {
+        "cluster": "Quatro",
+        "validator": "Quatro",
+        "source": [
+            "singleton"
+        ]
+    },
+    "vnd1jskPHR2gfMtgTtq6xCwANrAiNbQTKgVBAJHnMke": {
+        "cluster": "Vandal",
+        "validator": "Vandal",
+        "source": [
+            "singleton"
+        ]
+    },
+    "B48pw5uXH7gkCibuCBPE6nezKsCmYfFFwveCeMHpq4iv": {
+        "cluster": "Buffalo Steve",
+        "validator": "Buffalo Steve",
+        "source": [
+            "singleton"
+        ]
+    },
+    "MkyLHecSHN7TBdWgnh2J8KCsEHnsqqbVYSxtGmsshrk": {
+        "cluster": "Michigan Blockchain",
+        "validator": "Michigan Blockchain",
+        "source": [
+            "singleton"
+        ]
+    },
+    "J4pH3yiFrzFG1AQPRGBJXo3HP72MCZwsQamtp9ym4LwN": {
+        "cluster": "Dosirak \ud83c\uddf0\ud83c\uddf7",
+        "validator": "Dosirak \ud83c\uddf0\ud83c\uddf7",
+        "source": [
+            "singleton"
+        ]
+    },
+    "J1to3PQfXidUUhprQWgdKkQAMWPJAEqSJ7amkBDE9qhF": {
+        "cluster": "Bonk - Powered By Jito",
+        "validator": "BONK - Powered by Jito",
+        "source": [
+            "singleton"
+        ]
+    },
+    "9G19HT8xqceG7mKQVSrTRS3DGnGqDHErPyQEaEfyWEuW": {
+        "cluster": "Absolute Guard",
+        "validator": "Absolute Guard",
+        "source": [
+            "singleton"
+        ]
+    },
+    "BSGMtRHy9qvsPbUKtT8yqd7nNqn2urTcSMVUgzj9zJVd": {
+        "cluster": "Black Sea Gold",
+        "validator": "Black Sea Gold",
+        "source": [
+            "singleton"
+        ]
+    },
+    "fVotEjqpmpQYgyVyBCwYm62BKqqTQNE6SpYnRmdBazH": {
+        "cluster": "Alpha Waves",
+        "validator": "Alpha Waves",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7tKWFaaLi2FJSqukHxUrnXph8M3ynrqn3kEkKPpgcNHZ": {
+        "cluster": "Bitget Wallet",
+        "validator": "Bitget Wallet",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6F5xdRXh2W3B2vhte12VG79JVUkUSLYrHydGX1SAadfZ": {
+        "cluster": "Allnodes\u00a0\u26a1\ufe0f 0% Fee",
+        "validator": "Allnodes\u00a0\u26a1\ufe0f 0% fee",
+        "source": [
+            "singleton"
+        ]
+    },
+    "dstqVmt3cDH43Ux2SeTY2Hza1eVW6pwGLwehWCLfuPd": {
+        "cluster": "Dust Eleven",
+        "validator": "Dust Eleven",
+        "source": [
+            "singleton"
+        ]
+    },
+    "gaToR246dheK1DGAMEqxMdBJZwU4qFyt7DzhSwAHFWF": {
+        "cluster": "Valigator Open",
+        "validator": "Valigator Open",
+        "source": [
+            "singleton"
+        ]
+    },
+    "CP6mfD4Qc5AYrboXBAQeHMYj5x1UnYksDXRjG7DMkHH7": {
+        "cluster": "Dragon Trust Stake",
+        "validator": "Dragon Trust Stake",
+        "source": [
+            "singleton"
+        ]
+    },
+    "7obieMdVPKKcwEhhKizSkpdLaW1HMZh2ENrUDUhdGvVr": {
+        "cluster": "Golden Tower Staking",
+        "validator": "Golden Tower Staking",
+        "source": [
+            "singleton"
+        ]
+    },
+    "STBRgoYTmMwukhcBVjGpg3A4R9HBsrWo82wJgiBukaW": {
+        "cluster": "Superteam Brazil",
+        "validator": "Superteam Brazil",
+        "source": [
+            "singleton"
+        ]
+    },
+    "777VtXKGPmbpN2yGDAtHuAmDt2rQ7GKLnH6K8ViVv777": {
+        "cluster": "Sextant",
+        "validator": "Sextant",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2mxWiqtwdpE8zgkWxwFaJLn127dbuuHY4D32d8A6UnPL": {
+        "cluster": "Dsrv",
+        "validator": "DSRV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "AYSvheimgwhpRHXossLqrTBDPwo4jHDQJ1UhMeAArTwH": {
+        "cluster": "Dante \ud83d\udc3e",
+        "validator": "Dante \ud83d\udc3e",
+        "source": [
+            "singleton"
+        ]
+    },
+    "1oH9rfyrbKoP7ucJ1Zr2HLHmDU8N6G1G6dEuruFsSqy": {
+        "cluster": "Aisol",
+        "validator": "AiSol",
+        "source": [
+            "singleton"
+        ]
+    },
+    "SKRuTecmFDZHjs2DxRTJNEK7m7hunKGTWJiaZ3tMVVA": {
+        "cluster": "Solana Mobile Validator",
+        "validator": "Solana Mobile Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "3VZHxnkK1A3HYeWYaqgMebHnc2acgLzRiXYwTNm3ooYM": {
+        "cluster": "Orca",
+        "validator": "Orca",
+        "source": [
+            "singleton"
+        ]
+    },
+    "pENgUh4K9zNacyU3PXVE9KugW98XCqZsWpEvA8d8wzX": {
+        "cluster": "Pengu Validator",
+        "validator": "PENGU Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "GdVBPczdFaPf1GXvx8ByHeA1ZHAHwwmdQEPihH74SXm9": {
+        "cluster": "Rossi-Mainnet",
+        "validator": "rossi-mainnet",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FahWJg2PkphJaMUUCzdYhXkD5NngUuuFRFD3YCE3BSwb": {
+        "cluster": "Vault X | 0% Fee +Mev",
+        "validator": "Vault X | 0% fee +MEV",
+        "source": [
+            "singleton"
+        ]
+    },
+    "FXRu5NA4ouLGFuZNNWZFwwnvQz9zE7JCX3D23RJTc2NU": {
+        "cluster": "Bitprim Sol Validator",
+        "validator": "Bitprim SOL Validator",
+        "source": [
+            "singleton"
+        ]
+    },
+    "2ZiMfQaT59j86HVWCvspuMtBotnVBeTc3BKk3kKpwgKP": {
+        "cluster": "Stand With Ukraine",
+        "validator": "Stand With Ukraine",
+        "source": [
+            "singleton"
+        ]
+    },
+    "6q1VNp8Vy2Go12vb8CwbjUqqj2SXr2JYftJRWs71sW23": {
+        "cluster": "Exo Tech",
+        "validator": "Exo Tech",
+        "source": [
+            "singleton"
+        ]
+    }
+}
