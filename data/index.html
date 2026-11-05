@@ -74,6 +74,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#solana">Solana</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reading-input-data-from-ipfs">Reading input data from IPFS</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -227,6 +229,20 @@ Solana's on-chain Config program. Only validators that publish metadata are
 included, so this file can be reused as a reference across any range of blocks.
 Since validators can update their metadata over time, this file should ideally
 be regenerated periodically to stay current.</p>
+<h2 id="reading-input-data-from-ipfs">Reading input data from IPFS</h2>
+<p>In addition to local directories, entries in the <code>input_directories</code> list of the
+<a href="https://github.com/Blockchain-Technology-Lab/consensus-decentralization/blob/main/config.yaml">configuration file</a>
+can be IPFS references of the form <code>ipfs://&lt;CID&gt;</code> (optionally <code>ipfs://&lt;CID&gt;/&lt;subpath&gt;</code>). <code>&lt;CID&gt;</code> combined with
+<code>&lt;subpath&gt;</code> (if given) must resolve directly to a (unixfs) directory that contains raw data files named
+<code>&lt;ledger&gt;_raw_data.json</code>, in the same format expected in a local input directory (one file per ledger, following the
+schemas described above) - not to a parent/wrapper directory that merely contains such a directory.</p>
+<p>When such an entry is encountered, the relevant files are fetched from the gateway(s) configured via <code>ipfs_gateway</code> in
+the configuration file (a public gateway such as <code>https://ipfs.io</code> by default) and cached locally under
+<code>.ipfs_cache/</code> at the root of the repository, so that they are only fetched once. <code>ipfs_gateway</code> can also be a list
+of gateway URLs, in which case they are tried in order for each file, falling back to the next one on failure -
+useful for falling back to a local/self-hosted node's gateway (typically <code>http://127.0.0.1:8080</code>, requires running
+<code>ipfs daemon</code>) if a public gateway is unavailable or rate-limited. Note that the first item of <code>input_directories</code> is
+used as the destination for newly collected data (see above) and therefore should not be an IPFS reference.</p>
               
             </div>
           </div><footer>
