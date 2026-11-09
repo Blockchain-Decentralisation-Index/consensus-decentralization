@@ -1,88 +1,11 @@
 import pytest
-from cardano_preprocessing import (
-    filter_homepage,
-    get_domain,
-    determine_cluster_name,
+from mapping_information.cardano_preprocessing.cardano_preprocessing import (
     merge_pool_data,
     parse_pool_identifiers,
     score_same_entity,
     parse_pool_clusters,
-    normalise_ticker,
-    normalise_name
+    normalise_ticker
 )
-
-
-# ---------------------------------------------------------------------------
-# filter_homepage
-# ---------------------------------------------------------------------------
-
-class TestFilterHomepage:
-    def test_valid_url_passes(self):
-        assert filter_homepage('https://mypool.io') == 'https://mypool.io'
-
-    def test_strips_whitespace(self):
-        assert filter_homepage('  https://mypool.io  ') == 'https://mypool.io'
-
-    def test_empty_string_returns_none(self):
-        assert filter_homepage('') is None
-
-    def test_none_returns_none(self):
-        assert filter_homepage(None) is None
-
-    def test_na_variants_return_none(self):
-        for val in ['n/a', 'N/A', 'NA', 'https://', 'http://', '-', '---', 'TBD', '...']:
-            assert filter_homepage(val) is None, f"Expected None for {val!r}"
-
-    def test_placeholder_keywords_return_none(self):
-        assert filter_homepage('https://foo.com/pool') is None
-        assert filter_homepage('https://example.com') is None
-        assert filter_homepage('https://myinvalidurl.io') is None
-
-    def test_coming_soon_returns_none(self):
-        assert filter_homepage('Coming Soon') is None
-
-
-# ---------------------------------------------------------------------------
-# get_domain
-# ---------------------------------------------------------------------------
-
-class TestGetDomain:
-    def test_strips_www(self):
-        assert get_domain('https://www.mypool.io') == 'mypool.io'
-
-    def test_no_www(self):
-        assert get_domain('https://mypool.io') == 'mypool.io'
-
-    def test_with_path(self):
-        assert get_domain('https://mypool.io/about') == 'mypool.io'
-
-    def test_empty_string(self):
-        assert get_domain('') == ''
-
-    def test_invalid_url(self):
-        # Should not raise, returns empty string
-        assert get_domain('not a url at all') == ''
-
-
-# ---------------------------------------------------------------------------
-# determine_cluster_name
-# ---------------------------------------------------------------------------
-
-class TestDetermineClusterName:
-    def test_common_prefix(self):
-        assert determine_cluster_name(['Bloom Pool 1', 'Bloom Pool 2', 'Bloom Pool 3']) == 'Bloom Pool'
-
-    def test_no_common_prefix_sorts_alphabetically(self):
-        result = determine_cluster_name(['Zeta', 'Alpha', 'Mango'])
-        assert result == 'Alpha'
-
-    def test_digit_names_deprioritised(self):
-        # Names starting with a digit should come after alphabetic ones
-        result = determine_cluster_name(['1ST Pool', 'Alpha Pool'])
-        assert result == 'Alpha Pool'
-
-    def test_single_name(self):
-        assert determine_cluster_name(['Solo Pool']) == 'Solo Pool'
 
 
 # ---------------------------------------------------------------------------
@@ -363,40 +286,6 @@ class TestNormaliseTicker:
     def test_digits_in_middle_unchanged(self):
         # digits not at the end should not be stripped
         assert normalise_ticker('R4Y') == 'R4Y'
-
-
-# ---------------------------------------------------------------------------
-# normalise_name
-# ---------------------------------------------------------------------------
-
-class TestNormaliseName:
-    def test_strips_trailing_digits(self):
-        assert normalise_name('Ray Network 1') == 'ray network'
-        assert normalise_name('Bloom Pool 42') == 'bloom pool'
-
-    def test_lowercases(self):
-        assert normalise_name('RAY NETWORK') == 'ray network'
-
-    def test_strips_whitespace(self):
-        assert normalise_name('  Ray Network 1  ') == 'ray network'
-
-    def test_no_digits_lowercased(self):
-        assert normalise_name('Ray Network') == 'ray network'
-
-    def test_plural_not_stripped(self):
-        # 'Ray Network' and 'Ray Networks' should NOT normalise to the same value
-        assert normalise_name('Ray Network') != normalise_name('Ray Networks')
-
-    def test_digits_in_middle_not_stripped(self):
-        assert normalise_name('Pool 4 You') == 'pool 4 you'
-
-    def test_numbered_variants_match(self):
-        assert normalise_name('Ray Network 1') == normalise_name('Ray Network 2')
-        assert normalise_name('ATADA Stakepool Austria 1') == normalise_name('ATADA Stakepool Austria 2')
-
-    def test_different_names_do_not_match(self):
-        assert normalise_name('Cardano Pool 1') != normalise_name('Cardano Stake 1')
-        assert normalise_name('Tokyo Stake House') != normalise_name('Osaka Block Forge')
 
 
 if __name__ == '__main__':

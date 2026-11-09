@@ -1,28 +1,23 @@
+"""
+Generates the clusters file for Solana (clusters/solana.json) from the identifiers file (identifiers/solana.json).
+Run from the root directory of the project:
+python -m mapping_information.solana_preprocessing.solana_preprocessing
+"""
 import json
 import logging
 import os
 import pathlib
-import re
-from collections import Counter, defaultdict
-from urllib.parse import urlparse
+from collections import Counter
+
+from mapping_information.preprocessing_utils import (
+    cluster_by_score,
+    compare_homepages,
+    normalise_name
+)
 
 # ---------------------------------------------------------------------------
 # Homepage filtering
 # ---------------------------------------------------------------------------
-
-# Reused unchanged from cardano_preprocessing.py
-INVALID_HOMEPAGES = {
-    'https://', 'http://', 'n/a', 'na', '-', '--', '---', '....', '...',
-    'tbd', 'coming', 'coming soon', 'in process', 'no webside', 'no website',
-    'none', 'null', 'undefined', 'unknown'
-}
-
-# Reused unchanged from cardano_preprocessing.py
-INVALID_HOMEPAGE_SUBSTRINGS = [
-    'foo.com', 'example.com', 'invalidurl', 'test.com',
-    'localhost', '127.0.0.1', 'yourdomain', 'yoursite',
-    'mysite.com', 'mypool.com', 'poolname.com'
-]
 
 # Solana-specific. Path-style platforms: the operator identity lives in the URL
 # *path* (e.g. x.com/<user>, github.com/<user>), so get_domain() collapses every
@@ -40,59 +35,6 @@ SHARED_PLATFORM_DOMAINS = {
     'linktr.ee', 'discord.gg', 'discord.com', 'stakewiz.com', 'solanabeach.io',
     'validators.app', 'solscan.io', 'solana.fm'
 }
-
-
-def get_domain(url):
-    """Extracts the domain from a URL, stripping www. (reused from Cardano)"""
-    try:
-        domain = urlparse(url).netloc.lower()
-        return re.sub(r'^www\.', '', domain)
-    except Exception:
-        return ''
-
-
-def filter_homepage(homepage):
-    """
-    Filters out homepages that cannot serve as a genuine operator signal.
-
-    Reused from Cardano, with ONE Solana-specific addition: homepages whose
-    domain is a shared path-style platform (SHARED_PLATFORM_DOMAINS) are
-    rejected, because those collapse many unrelated validators onto a single
-    domain.
-
-    :param homepage: the homepage to be filtered (string)
-    :returns: the homepage (as-is) if it is usable, else None
-    """
-    if not homepage:
-        return None
-
-    homepage = homepage.strip()
-    if not homepage:
-        return None
-
-    homepage_lower = homepage.lower()
-
-    if homepage_lower in INVALID_HOMEPAGES:
-        return None
-
-    if any(kw in homepage_lower for kw in INVALID_HOMEPAGE_SUBSTRINGS):
-        return None
-
-    # Solana-specific: reject shared path-style platform domains.
-    if get_domain(homepage) in SHARED_PLATFORM_DOMAINS:
-        return None
-
-    return homepage
-
-
-# ---------------------------------------------------------------------------
-# Name normalisation
-# ---------------------------------------------------------------------------
-
-def normalise_name(name):
-    """Lowercases, strips trailing digits and whitespace for fuzzy name matching,
-    e.g. 'Validator 1' -> 'validator'. (reused from Cardano)"""
-    return re.sub(r'\s*\d+$', '', name.strip().lower()).strip()
 
 
 # ---------------------------------------------------------------------------
@@ -118,13 +60,11 @@ def score_same_entity(v1, v2):
     score = 0
     signals = []
 
-    # Homepage (domain) match
-    d1 = get_domain(v1.get('homepage', ''))
-    d2 = get_domain(v2.get('homepage', ''))
-    filtered_d1 = filter_homepage(v1.get('homepage', ''))
-    filtered_d2 = filter_homepage(v2.get('homepage', ''))
-    domains_valid = bool(filtered_d1 and filtered_d2 and d1 and d2)
-    if domains_valid and d1 == d2:
+    # Homepage (domain) match, rejecting shared path-style platform domains
+    _, same_domain = compare_homepages(
+        v1.get('homepage', ''), v2.get('homepage', ''), blocked_domains=SHARED_PLATFORM_DOMAINS
+    )
+    if same_domain:
         score += 3
         signals.append('homepage')
 
@@ -146,8 +86,9 @@ def determine_cluster_name(validator_names):
     """
     Determines the name of a cluster of validators.
 
-    Adapted from Cardano's version. Cardano names a cluster after the common
-    prefix of its members' names, which works when members share a brand at the
+    Solana-specific version of the shared determine_cluster_name in
+    preprocessing_utils (used by Cardano). The shared version names a cluster
+    after the common prefix of its members' names, which works when members share a brand at the
     start (e.g. "Temporal Topaz"/"Temporal Emerald" -> "Temporal"). On Solana,
     though, members are frequently grouped by a shared HOMEPAGE while their
     names have nothing in common, so a raw common prefix can collapse to a stray
@@ -216,55 +157,10 @@ def parse_validator_clusters(validator_data, score_threshold=3):
     :returns: dict keyed by vote account with 'cluster', 'validator' and 'source'
     """
     logging.info("Parsing validator clusters..")
-
-    vote_accounts = list(validator_data.keys())
-    validators = list(validator_data.values())
-    n = len(validators)
-
-    # --- Union-Find (reused from Cardano, unchanged) ---
-    parent = list(range(n))
-
-    def find(x):
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]  # path compression
-            x = parent[x]
-        return x
-
-    def union(x, y):
-        parent[find(x)] = find(y)
-
-    # source[i] = signals that caused validator i to be clustered, or None if not yet
-    source = [None] * n
-
-    # --- Compare all pairs and merge if above threshold ---
-    for i in range(n):
-        for j in range(i + 1, n):
-            score, signals = score_same_entity(validators[i], validators[j])
-            if score >= score_threshold:
-                if find(i) != find(j):
-                    union(i, j)
-                    for idx in [i, j]:
-                        if source[idx] is None:
-                            source[idx] = signals
-
-    # --- Build clusters ---
-    clusters = defaultdict(list)
-    for i in range(n):
-        clusters[find(i)].append(i)
-
-    # --- Build output ---
-    output = {}
-    for members in clusters.values():
-        validator_names = [validators[i].get('name', '') for i in members]
-        cluster_name = determine_cluster_name(validator_names)
-        for i in members:
-            output[vote_accounts[i]] = {
-                'cluster': cluster_name,
-                'validator': validators[i].get('name', ''),
-                'source': source[i] if source[i] is not None else ['singleton']
-            }
-
-    return output
+    return cluster_by_score(
+        validator_data, score_same_entity, member_key='validator',
+        score_threshold=score_threshold, name_fn=determine_cluster_name
+    )
 
 
 if __name__ == '__main__':

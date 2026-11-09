@@ -1,25 +1,22 @@
+"""
+Generates the identifiers and clusters files for Cardano from pool metadata.
+Run from the root directory of the project:
+python -m mapping_information.cardano_preprocessing.cardano_preprocessing
+"""
 import pathlib
 import google.cloud.bigquery as bq
 import json
 import argparse
-from collections import defaultdict
 import logging
-import os
 import re
-from urllib.parse import urlparse
 
-
-INVALID_HOMEPAGES = {
-    'https://', 'http://', 'n/a', 'na', '-', '--', '---', '....', '...',
-    'tbd', 'coming', 'coming soon', 'in process', 'no webside', 'no website',
-    'none', 'null', 'undefined', 'unknown'
-}
-
-INVALID_HOMEPAGE_SUBSTRINGS = [
-    'foo.com', 'example.com', 'invalidurl', 'test.com',
-    'localhost', '127.0.0.1', 'yourdomain', 'yoursite',
-    'mysite.com', 'mypool.com', 'poolname.com'
-]
+from mapping_information.preprocessing_utils import (
+    cluster_by_score,
+    compare_homepages,
+    filter_homepage,
+    get_domain,
+    normalise_name
+)
 
 
 def get_pool_data_BQ(force_query):
@@ -138,12 +135,6 @@ def normalise_ticker(ticker):
     return stripped if stripped else ticker.strip().upper()
 
 
-def normalise_name(name):
-    """Lowercases, strips trailing digits and whitespace for fuzzy name matching,
-    e.g. 'Ray Network 1' -> 'ray network'."""
-    return re.sub(r'\s*\d+$', '', name.strip().lower()).strip()
-
-
 def score_same_entity(p1, p2):
     """
     Scores how likely two pools belong to the same operator entity.
@@ -161,12 +152,8 @@ def score_same_entity(p1, p2):
     signals = []
 
     # Domain match
-    d1 = get_domain(p1.get('homepage', ''))
-    d2 = get_domain(p2.get('homepage', ''))
-    filtered_d1 = filter_homepage(p1.get('homepage', ''))
-    filtered_d2 = filter_homepage(p2.get('homepage', ''))
-    domains_valid = bool(filtered_d1 and filtered_d2 and d1 and d2)
-    if domains_valid and d1 == d2:
+    domains_valid, same_domain = compare_homepages(p1.get('homepage', ''), p2.get('homepage', ''))
+    if same_domain:
         score += 3
         signals.append('homepage')
     elif domains_valid:
@@ -213,112 +200,7 @@ def parse_pool_clusters(pool_data, score_threshold=3):
     caused it to be clustered, or ['singleton'] if it was never grouped.
     """
     logging.info("Parsing pool clusters..")
-
-    pool_hashes = list(pool_data.keys())
-    pools = list(pool_data.values())
-    n = len(pools)
-
-    # --- Union-Find ---
-    parent = list(range(n))
-
-    def find(x):
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]  # path compression
-            x = parent[x]
-        return x
-
-    def union(x, y):
-        parent[find(x)] = find(y)
-
-    # source[i] = signals that caused pool i to be clustered, or None if not yet
-    source = [None] * n
-
-    # --- Compare all pairs and merge if above threshold ---
-    for i in range(n):
-        for j in range(i + 1, n):
-            score, signals = score_same_entity(pools[i], pools[j])
-            if score >= score_threshold:
-                if find(i) != find(j):
-                    union(i, j)
-                    for idx in [i, j]:
-                        if source[idx] is None:
-                            source[idx] = signals
-
-    # --- Build clusters ---
-    clusters = defaultdict(list)
-    for i in range(n):
-        clusters[find(i)].append(i)
-
-    # --- Build output ---
-    output = {}
-    for members in clusters.values():
-        pool_names = [pools[i].get('name', '') for i in members]
-        cluster_name = determine_cluster_name(pool_names)
-        for i in members:
-            output[pool_hashes[i]] = {
-                'cluster': cluster_name,
-                'pool': pools[i].get('name', ''),
-                'source': source[i] if source[i] is not None else ['singleton']
-            }
-
-    return output
-
-
-def get_domain(url):
-    """Extracts the domain from a URL, stripping www."""
-    try:
-        domain = urlparse(url).netloc.lower()
-        return re.sub(r'^www\.', '', domain)
-    except Exception:
-        return ''
-
-
-def filter_homepage(homepage):
-    """
-    Filters out dummy homepages. Specifically, it ignores homepage entries that are empty,
-    have an 'empty' name (e.g. 'n/a') or include a dummy keyword in their name (e.g. foo.com)
-    :param homepage: the homepage to be filtered (string)
-    :returns: the homepage (as it is) if it is not a dummy homepage, else None
-    """
-    if not homepage:
-        return None
-
-    homepage = homepage.strip()
-    if not homepage:
-        return None
-
-    homepage_lower = homepage.lower()
-
-    if homepage_lower in INVALID_HOMEPAGES:
-        return None
-
-    if any(kw in homepage_lower for kw in INVALID_HOMEPAGE_SUBSTRINGS):
-        return None
-
-    return homepage
-
-
-def determine_cluster_name(pool_names):
-    """
-    Determines the name of a cluster of pools.
-    First, it checks if there is a common prefix among all pool names. If there is, it uses that as the cluster name.
-    If no common prefix exists, then it names the cluster after the first pool name (in alphabetical order and
-    prioritizing names that don't start with a digit)
-    :param pool_names: list of pool names that belong to the same cluster
-    :returns: the name of the cluster
-    """
-    # make sure pool names have consistent case and filter out empty names
-    pool_names = [pool_name.title() for pool_name in pool_names if pool_name]
-    if not pool_names:
-        return ''
-    common_prefix = os.path.commonprefix(pool_names)
-    if common_prefix:
-        common_prefix = common_prefix.strip()
-        return common_prefix
-    # if there is no common prefix, sort pool names alphabetically, prioritizing names that don't start with a digit
-    # and use the first one as the cluster name
-    pool_names = sorted(pool_names, key=lambda x: (x[0].isdigit(), x))
-    return pool_names[0]
+    return cluster_by_score(pool_data, score_same_entity, member_key='pool', score_threshold=score_threshold)
 
 
 if __name__ == '__main__':
