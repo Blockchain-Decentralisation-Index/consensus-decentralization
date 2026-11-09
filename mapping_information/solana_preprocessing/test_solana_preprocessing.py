@@ -1,40 +1,18 @@
 import pytest
-from solana_preprocessing import (
-    filter_homepage,
-    get_domain,
+from mapping_information.preprocessing_utils import filter_homepage
+from mapping_information.solana_preprocessing.solana_preprocessing import (
+    SHARED_PLATFORM_DOMAINS,
     determine_cluster_name,
-    normalise_name,
     score_same_entity,
     parse_validator_clusters,
 )
 
 
 # ---------------------------------------------------------------------------
-# filter_homepage
+# SHARED_PLATFORM_DOMAINS (Solana-specific homepage filtering)
 # ---------------------------------------------------------------------------
 
-class TestFilterHomepage:
-    def test_valid_url_passes(self):
-        assert filter_homepage('https://myvalidator.io') == 'https://myvalidator.io'
-
-    def test_strips_whitespace(self):
-        assert filter_homepage('  https://myvalidator.io  ') == 'https://myvalidator.io'
-
-    def test_empty_string_returns_none(self):
-        assert filter_homepage('') is None
-
-    def test_none_returns_none(self):
-        assert filter_homepage(None) is None
-
-    def test_na_variants_return_none(self):
-        for val in ['n/a', 'N/A', 'NA', 'https://', 'http://', '-', '---', 'TBD', '...']:
-            assert filter_homepage(val) is None, f"Expected None for {val!r}"
-
-    def test_placeholder_keywords_return_none(self):
-        assert filter_homepage('https://foo.com/validator') is None
-        assert filter_homepage('https://example.com') is None
-
-    # --- Solana-specific: path-style platforms are rejected ------------------
+class TestSharedPlatformDomains:
     def test_path_style_platforms_rejected(self):
         # Identity lives in the URL path, so get_domain() collapses every user
         # onto the same bare domain -> would falsely group unrelated validators.
@@ -47,9 +25,8 @@ class TestFilterHomepage:
             'https://linktr.ee/somevalidator',
             'https://stakewiz.com/validator/abc',
         ]:
-            assert filter_homepage(url) is None, f"Expected None for path-style {url!r}"
+            assert filter_homepage(url, SHARED_PLATFORM_DOMAINS) is None, f"Expected None for path-style {url!r}"
 
-    # --- Solana-specific: subdomain-style hosts are NOT rejected -------------
     def test_subdomain_style_hosts_pass(self):
         # Identity lives in the subdomain, which get_domain() preserves, so
         # distinct projects get distinct domains -> a genuine signal.
@@ -59,39 +36,7 @@ class TestFilterHomepage:
             'https://myvalidator.netlify.app',
             'https://myvalidator.vercel.app',
         ]:
-            assert filter_homepage(url) == url, f"Expected {url!r} to pass"
-
-
-# ---------------------------------------------------------------------------
-# get_domain
-# ---------------------------------------------------------------------------
-
-class TestGetDomain:
-    def test_strips_www(self):
-        assert get_domain('https://www.myvalidator.io') == 'myvalidator.io'
-
-    def test_no_www(self):
-        assert get_domain('https://myvalidator.io') == 'myvalidator.io'
-
-    def test_with_path(self):
-        assert get_domain('https://myvalidator.io/about') == 'myvalidator.io'
-
-    def test_empty_string(self):
-        assert get_domain('') == ''
-
-    def test_invalid_url(self):
-        assert get_domain('not a url at all') == ''
-
-    def test_preserves_subdomain(self):
-        # Critical for the subdomain-style logic: the subdomain must survive so
-        # two different projects on the same host stay on distinct domains.
-        assert get_domain('https://site-et7.pages.dev') == 'site-et7.pages.dev'
-        assert get_domain('https://other.pages.dev') == 'other.pages.dev'
-
-    def test_path_style_collapses_to_bare_domain(self):
-        # The flip side: path-style hosts collapse to one domain (hence blacklist).
-        assert get_domain('https://x.com/alice') == 'x.com'
-        assert get_domain('https://x.com/bob') == 'x.com'
+            assert filter_homepage(url, SHARED_PLATFORM_DOMAINS) == url, f"Expected {url!r} to pass"
 
 
 # ---------------------------------------------------------------------------
@@ -122,37 +67,6 @@ class TestDetermineClusterName:
 
     def test_single_name_kept_whole(self):
         assert determine_cluster_name(['Solo Validator']) == 'Solo Validator'
-
-
-# ---------------------------------------------------------------------------
-# normalise_name
-# ---------------------------------------------------------------------------
-
-class TestNormaliseName:
-    def test_strips_trailing_digits(self):
-        assert normalise_name('Kraken 1') == 'kraken'
-        assert normalise_name('Temporal 42') == 'temporal'
-
-    def test_lowercases(self):
-        assert normalise_name('KRAKEN') == 'kraken'
-
-    def test_strips_whitespace(self):
-        assert normalise_name('  Kraken 1  ') == 'kraken'
-
-    def test_no_digits_lowercased(self):
-        assert normalise_name('Kraken') == 'kraken'
-
-    def test_plural_not_stripped(self):
-        assert normalise_name('Node') != normalise_name('Nodes')
-
-    def test_digits_in_middle_not_stripped(self):
-        assert normalise_name('Pool 4 You') == 'pool 4 you'
-
-    def test_numbered_variants_match(self):
-        assert normalise_name('Kraken 1') == normalise_name('Kraken 2')
-
-    def test_different_names_do_not_match(self):
-        assert normalise_name('U1S1 Validator') != normalise_name('Moutai Validator')
 
 
 # ---------------------------------------------------------------------------
