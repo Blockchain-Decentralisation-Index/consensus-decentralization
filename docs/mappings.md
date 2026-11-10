@@ -55,7 +55,7 @@ structure is as follows:
 #### Clusters
 
 The files under `clusters` define information about pool clusters.
-Each key corresponds to a unique pool id (e.g. pool hash in Cardano).
+Each key corresponds to a unique pool id (e.g. pool hash in Cardano, vote account in Solana).
 The value for each key is a dictionary including
 the cluster to which the pool belongs, the pool's name, and the source of 
 information about the cluster. The source field is a list of the signals that
@@ -231,11 +231,14 @@ identifier.
 identity account) rather than a general address set, since each Solana block
 has exactly one reward address.
 
+**Cluster lookup** is performed via the block's vote account, which is used as
+the key for the clusters file.
+
 Note that, unlike Cardano where the pool hash serves as both the identifier and
 the reward address, in Solana the identifier (vote account) and the reward
 address (identity account) are distinct values. The vote account is used for
-identifier lookup, while the identity account is used for address lookup (and,
-in the future, cluster lookup).
+identifier and cluster lookup, while the identity account is used for address
+lookup.
 
 The vote account is chosen as the identifier because it is a stable, permanent
 value, whereas a validator's identity account can be rotated over time. As a
@@ -244,3 +247,33 @@ validators that publish metadata are consistently grouped under their name. The
 fallback path, which attributes a block to its identity account when no name is
 known, is less robust, as a validator that rotates its identity account may
 appear as more than one entity.
+
+### Solana validator data preprocessing
+
+The clusters file for Solana is generated from the identifiers file
+(`identifiers/solana.json`), which contains the metadata (name and homepage)
+that validators publish on-chain, keyed by vote account. No additional data
+collection is required.
+
+**Clusters** are built in the same way as for Cardano, by scoring every pair of
+validators and merging those that score at or above a threshold. Since Solana
+validators publish no ticker or description, scoring only uses the following
+signals:
+
+- Same homepage domain: +3
+- Same name (after lowercasing and stripping trailing digits): +2
+
+The default threshold is 3, so a homepage match alone is sufficient to cluster
+two validators, while a name match alone is not and only serves as a
+corroborating signal. Unlike Cardano, there is no penalty for different
+domains, as with only two signals it would not change any outcome.
+
+Homepages on shared path-style platforms (e.g. `x.com/<user>`,
+`github.com/<user>`, `t.me/<user>`) are ignored, since the operator's identity
+is in the URL path and all such homepages reduce to the same domain, which would
+group unrelated validators together. Subdomain-style hosts (e.g. `*.github.io`,
+`*.pages.dev`) are kept, since the subdomain identifies the operator.
+
+Each cluster is named after the common prefix of its members' names when it is
+a whole word, otherwise after the first word of the alphabetically first member
+name.
