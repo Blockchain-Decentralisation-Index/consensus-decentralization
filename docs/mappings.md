@@ -275,5 +275,4 @@ group unrelated validators together. Subdomain-style hosts (e.g. `*.github.io`,
 `*.pages.dev`) are kept, since the subdomain identifies the operator.
 
 Each cluster is named after the common prefix of its members' names when it is
-a whole word, otherwise after the first word of the alphabetically first member
-name.
+a whole word, otherwise after the full name of the alphabetically first member.

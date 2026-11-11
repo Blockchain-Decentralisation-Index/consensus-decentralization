@@ -94,13 +94,15 @@ def determine_cluster_name(validator_names):
     names have nothing in common, so a raw common prefix can collapse to a stray
     shared letter (e.g. "SUNREN" + "Solana Vibe Station" -> "S"), which is not a
     real name. We therefore accept the common prefix only when it is a WHOLE
-    token (reaches a word boundary). Otherwise we fall back to the first word of
-    the alphabetically first member, so the cluster still gets a real, human-
-    meaningful name.
+    token (reaches a word boundary). Otherwise we fall back to the full name of
+    the alphabetically first member (as the shared version does), so the cluster
+    still gets a real, human-meaningful name. Taking only its first word could be
+    misleading, e.g. "SUNREN" + "Solana Vibe Station" -> "Solana", which could be
+    confused with the chain itself.
     :param validator_names: list of validator names that belong to the same cluster
     :returns: the name of the cluster
     """
-    names = [name.title() for name in validator_names if name]
+    names = [name.title() for name in validator_names if name and name.strip()]
     if not names:
         return ''
 
@@ -119,11 +121,9 @@ def determine_cluster_name(validator_names):
     if prefix_is_whole_token:
         return prefix
 
-    # Fallback: first word of the alphabetically first member name
+    # Fallback: full name of the alphabetically first member
     # (de-prioritising names that start with a digit).
-    first_name = sorted(names, key=lambda x: (x[0].isdigit(), x))[0]
-    tokens = first_name.split()
-    return tokens[0] if tokens else prefix
+    return sorted(names, key=lambda x: (x[0].isdigit(), x))[0]
 
 
 # ---------------------------------------------------------------------------

@@ -47,13 +47,14 @@ class TestDetermineClusterName:
     def test_common_prefix_whole_word(self):
         assert determine_cluster_name(['Bloom Pool 1', 'Bloom Pool 2', 'Bloom Pool 3']) == 'Bloom Pool'
 
-    def test_stray_shared_letter_falls_back_to_first_word(self):
+    def test_stray_shared_letter_falls_back_to_full_name(self):
         # "Sunren" + "Solana Vibe Station" share only "S"; the guard rejects
-        # that fragment and uses the first word of the alphabetically-first name.
-        assert determine_cluster_name(['SUNREN', 'Solana Vibe Station']) == 'Solana'
+        # that fragment and uses the full alphabetically-first name (not just its
+        # first word, which would give "Solana", the name of the chain itself).
+        assert determine_cluster_name(['SUNREN', 'Solana Vibe Station']) == 'Solana Vibe Station'
 
-    def test_no_common_prefix_uses_first_word_alphabetically(self):
-        assert determine_cluster_name(['Zeta Validator', 'Alpha Node', 'Mango Stake']) == 'Alpha'
+    def test_no_common_prefix_uses_full_name_alphabetically(self):
+        assert determine_cluster_name(['Zeta Validator', 'Alpha Node', 'Mango Stake']) == 'Alpha Node'
 
     def test_digit_boundary_prefix_kept(self):
         # "Kiln1"/"Kiln2" share "Kiln" with only trailing digits after it.
@@ -63,10 +64,14 @@ class TestDetermineClusterName:
         assert determine_cluster_name(['Coinbase', 'Coinbase 02', 'Coinbase 03']) == 'Coinbase'
 
     def test_digit_names_deprioritised(self):
-        assert determine_cluster_name(['1ST Node', 'Alpha Pool']) == 'Alpha'
+        assert determine_cluster_name(['1ST Node', 'Alpha Pool']) == 'Alpha Pool'
 
     def test_single_name_kept_whole(self):
         assert determine_cluster_name(['Solo Validator']) == 'Solo Validator'
+
+    def test_whitespace_only_names_ignored(self):
+        assert determine_cluster_name([' ']) == ''
+        assert determine_cluster_name([' ', 'Solo Validator']) == 'Solo Validator'
 
 
 # ---------------------------------------------------------------------------
